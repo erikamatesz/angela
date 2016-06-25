@@ -1,31 +1,39 @@
 //
-//  LoginVC.swift
+//  CadastroViewController.swift
 //  angela
 //
-//  Created by Tamyres Freitas on 6/25/16.
+//  Created by Maria Carolina Santos on 25/06/16.
 //  Copyright © 2016 Maria Carolina Marinho Séves Santos. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class CadastroViewController: UIViewController, UITextFieldDelegate {
     
-    //textfields
+    //Imagem perfil
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    
+    //Textfields
+    @IBOutlet weak var nomeTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var telefoneTextfield: UITextField!
     @IBOutlet weak var senhaTextfield: UITextField!
+    @IBOutlet weak var ajudaTextfield: UITextField!
     
-    //buttons
-    @IBOutlet weak var loginButton: UIButton!
+    //Botoes
     @IBOutlet weak var criarButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nomeTextfield.delegate = self
         emailTextfield.delegate = self
+        telefoneTextfield.delegate = self
         senhaTextfield.delegate = self
+        ajudaTextfield.delegate = self
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -33,14 +41,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    @IBAction func loginClicked(sender: AnyObject) {
-        
-    }
-    
     @IBAction func criarClicked(sender: AnyObject) {
         
+        
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

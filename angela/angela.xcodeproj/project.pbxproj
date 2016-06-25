@@ -14,13 +14,18 @@
 		094F93741D1ED594005C46A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094F93721D1ED594005C46A4 /* LaunchScreen.storyboard */; };
 		094F937F1D1ED594005C46A4 /* angelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F937E1D1ED594005C46A4 /* angelaTests.swift */; };
 		094F938A1D1ED594005C46A4 /* angelaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93891D1ED594005C46A4 /* angelaUITests.swift */; };
-		094F939F1D1ED709005C46A4 /* CadastroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F939E1D1ED709005C46A4 /* CadastroVC.swift */; };
-		094F93A11D1ED712005C46A4 /* NovoEventoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A01D1ED712005C46A4 /* NovoEventoVC.swift */; };
 		094F93A51D1ED92D005C46A4 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A41D1ED92D005C46A4 /* Usuario.swift */; };
 		094F93A71D1EDA19005C46A4 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A61D1EDA19005C46A4 /* Eventos.swift */; };
 		094F93AB1D1EDBAE005C46A4 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */; };
 		094F93B91D1EFC5E005C46A4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93B81D1EFC5E005C46A4 /* SwiftyJSON.swift */; };
-		86B2FA0A1D1EEEA10012067A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2FA091D1EEEA10012067A /* LoginVC.swift */; };
+		094F93BE1D1F3098005C46A4 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93BC1D1F3098005C46A4 /* CadastroViewController.swift */; };
+		094F93BF1D1F3098005C46A4 /* CadastroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094F93BD1D1F3098005C46A4 /* CadastroViewController.xib */; };
+		094F93C21D1F3120005C46A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93C01D1F3120005C46A4 /* LoginViewController.swift */; };
+		094F93C31D1F3120005C46A4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094F93C11D1F3120005C46A4 /* LoginViewController.xib */; };
+		094F93C61D1F318F005C46A4 /* EventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93C41D1F318F005C46A4 /* EventoViewController.swift */; };
+		094F93C71D1F318F005C46A4 /* EventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094F93C51D1F318F005C46A4 /* EventoViewController.xib */; };
+		094F93CA1D1F31C9005C46A4 /* NovoEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93C81D1F31C9005C46A4 /* NovoEventoViewController.swift */; };
+		094F93CB1D1F31C9005C46A4 /* NovoEventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +59,18 @@
 		094F93851D1ED594005C46A4 /* angelaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = angelaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094F93891D1ED594005C46A4 /* angelaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = angelaUITests.swift; sourceTree = "<group>"; };
 		094F938B1D1ED594005C46A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		094F939E1D1ED709005C46A4 /* CadastroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroVC.swift; sourceTree = "<group>"; };
-		094F93A01D1ED712005C46A4 /* NovoEventoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoEventoVC.swift; sourceTree = "<group>"; };
 		094F93A41D1ED92D005C46A4 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		094F93A61D1EDA19005C46A4 /* Eventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		094F93B81D1EFC5E005C46A4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		86B2FA091D1EEEA10012067A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		094F93BC1D1F3098005C46A4 /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		094F93BD1D1F3098005C46A4 /* CadastroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CadastroViewController.xib; sourceTree = "<group>"; };
+		094F93C01D1F3120005C46A4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		094F93C11D1F3120005C46A4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		094F93C41D1F318F005C46A4 /* EventoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventoViewController.swift; sourceTree = "<group>"; };
+		094F93C51D1F318F005C46A4 /* EventoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventoViewController.xib; sourceTree = "<group>"; };
+		094F93C81D1F31C9005C46A4 /* NovoEventoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoEventoViewController.swift; sourceTree = "<group>"; };
+		094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NovoEventoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				094F93971D1ED5BE005C46A4 /* Model */,
-				094F93981D1ED5C5005C46A4 /* View */,
-				094F93991D1ED5CB005C46A4 /* Controller */,
+				094F93981D1ED5C5005C46A4 /* Controller */,
+				094F93991D1ED5CB005C46A4 /* View */,
 				094F93691D1ED594005C46A4 /* AppDelegate.swift */,
 				094F93701D1ED594005C46A4 /* Assets.xcassets */,
 				094F93721D1ED594005C46A4 /* LaunchScreen.storyboard */,
@@ -151,23 +161,28 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		094F93981D1ED5C5005C46A4 /* View */ = {
+		094F93981D1ED5C5005C46A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				094F93C01D1F3120005C46A4 /* LoginViewController.swift */,
+				094F93BC1D1F3098005C46A4 /* CadastroViewController.swift */,
+				094F93C81D1F31C9005C46A4 /* NovoEventoViewController.swift */,
+				094F93C41D1F318F005C46A4 /* EventoViewController.swift */,
 				094F936B1D1ED594005C46A4 /* MainViewController.swift */,
-				094F939E1D1ED709005C46A4 /* CadastroVC.swift */,
-				094F93A01D1ED712005C46A4 /* NovoEventoVC.swift */,
-				86B2FA091D1EEEA10012067A /* LoginVC.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		094F93991D1ED5CB005C46A4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				094F936D1D1ED594005C46A4 /* Main.storyboard */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		094F93991D1ED5CB005C46A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				094F93C11D1F3120005C46A4 /* LoginViewController.xib */,
+				094F93BD1D1F3098005C46A4 /* CadastroViewController.xib */,
+				094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */,
+				094F93C51D1F318F005C46A4 /* EventoViewController.xib */,
+				094F936D1D1ED594005C46A4 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +289,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094F93C31D1F3120005C46A4 /* LoginViewController.xib in Resources */,
 				094F93741D1ED594005C46A4 /* LaunchScreen.storyboard in Resources */,
+				094F93CB1D1F31C9005C46A4 /* NovoEventoViewController.xib in Resources */,
 				094F93711D1ED594005C46A4 /* Assets.xcassets in Resources */,
+				094F93C71D1F318F005C46A4 /* EventoViewController.xib in Resources */,
 				094F936F1D1ED594005C46A4 /* Main.storyboard in Resources */,
+				094F93BF1D1F3098005C46A4 /* CadastroViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,13 +322,14 @@
 			files = (
 				094F93AB1D1EDBAE005C46A4 /* Pessoa.swift in Sources */,
 				094F936C1D1ED594005C46A4 /* MainViewController.swift in Sources */,
-				86B2FA0A1D1EEEA10012067A /* LoginVC.swift in Sources */,
-				094F93A11D1ED712005C46A4 /* NovoEventoVC.swift in Sources */,
+				094F93CA1D1F31C9005C46A4 /* NovoEventoViewController.swift in Sources */,
+				094F93BE1D1F3098005C46A4 /* CadastroViewController.swift in Sources */,
+				094F93C61D1F318F005C46A4 /* EventoViewController.swift in Sources */,
 				094F93A71D1EDA19005C46A4 /* Eventos.swift in Sources */,
-				094F939F1D1ED709005C46A4 /* CadastroVC.swift in Sources */,
 				094F93B91D1EFC5E005C46A4 /* SwiftyJSON.swift in Sources */,
 				094F936A1D1ED594005C46A4 /* AppDelegate.swift in Sources */,
 				094F93A51D1ED92D005C46A4 /* Usuario.swift in Sources */,
+				094F93C21D1F3120005C46A4 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
