@@ -19,6 +19,7 @@
 		094F93A51D1ED92D005C46A4 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A41D1ED92D005C46A4 /* Usuario.swift */; };
 		094F93A71D1EDA19005C46A4 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A61D1EDA19005C46A4 /* Eventos.swift */; };
 		094F93AB1D1EDBAE005C46A4 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */; };
+		094F93B91D1EFC5E005C46A4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93B81D1EFC5E005C46A4 /* SwiftyJSON.swift */; };
 		86B2FA0A1D1EEEA10012067A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2FA091D1EEEA10012067A /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		094F93A41D1ED92D005C46A4 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		094F93A61D1EDA19005C46A4 /* Eventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		094F93B81D1EFC5E005C46A4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		86B2FA091D1EEEA10012067A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 		094F93971D1ED5BE005C46A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				094F93B81D1EFC5E005C46A4 /* SwiftyJSON.swift */,
 				094F93A41D1ED92D005C46A4 /* Usuario.swift */,
 				094F93A61D1EDA19005C46A4 /* Eventos.swift */,
 				094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */,
@@ -304,6 +307,7 @@
 				094F93A11D1ED712005C46A4 /* NovoEventoVC.swift in Sources */,
 				094F93A71D1EDA19005C46A4 /* Eventos.swift in Sources */,
 				094F939F1D1ED709005C46A4 /* CadastroVC.swift in Sources */,
+				094F93B91D1EFC5E005C46A4 /* SwiftyJSON.swift in Sources */,
 				094F936A1D1ED594005C46A4 /* AppDelegate.swift in Sources */,
 				094F93A51D1ED92D005C46A4 /* Usuario.swift in Sources */,
 			);
