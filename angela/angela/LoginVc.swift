@@ -1,40 +1,31 @@
-
 //
-//  CadastroVC.swift
+//  LoginVC.swift
 //  angela
 //
-//  Created by Maria Carolina Santos on 25/06/16.
+//  Created by Tamyres Freitas on 6/25/16.
 //  Copyright © 2016 Maria Carolina Marinho Séves Santos. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class CadastroVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
-    //Imagem perfil
-    @IBOutlet weak var profilePicture: UIImageView!
-    
-    
-    //Textfields
-    @IBOutlet weak var nomeTextfield: UITextField!
+    //textfields
     @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var telefoneTextfield: UITextField!
     @IBOutlet weak var senhaTextfield: UITextField!
-    @IBOutlet weak var ajudaTextfield: UITextField!
-   
-    //Botoes
-    @IBOutlet weak var criarButton: UIButton!
     
+    //buttons
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var criarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nomeTextfield.delegate = self
         emailTextfield.delegate = self
-        telefoneTextfield.delegate = self
         senhaTextfield.delegate = self
-        ajudaTextfield.delegate = self
         
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -42,11 +33,14 @@ class CadastroVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func criarClicked(sender: AnyObject) {
-        
+    
+    @IBAction func loginClicked(sender: AnyObject) {
         
     }
     
+    @IBAction func criarClicked(sender: AnyObject) {
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

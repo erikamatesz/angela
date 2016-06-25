@@ -19,6 +19,7 @@
 		094F93A51D1ED92D005C46A4 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A41D1ED92D005C46A4 /* Usuario.swift */; };
 		094F93A71D1EDA19005C46A4 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93A61D1EDA19005C46A4 /* Eventos.swift */; };
 		094F93AB1D1EDBAE005C46A4 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */; };
+		86B2FA0A1D1EEEA10012067A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2FA091D1EEEA10012067A /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		094F93A41D1ED92D005C46A4 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		094F93A61D1EDA19005C46A4 /* Eventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		094F93AA1D1EDBAE005C46A4 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		86B2FA091D1EEEA10012067A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				094F936B1D1ED594005C46A4 /* MainViewController.swift */,
 				094F939E1D1ED709005C46A4 /* CadastroVC.swift */,
 				094F93A01D1ED712005C46A4 /* NovoEventoVC.swift */,
+				86B2FA091D1EEEA10012067A /* LoginVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			files = (
 				094F93AB1D1EDBAE005C46A4 /* Pessoa.swift in Sources */,
 				094F936C1D1ED594005C46A4 /* MainViewController.swift in Sources */,
+				86B2FA0A1D1EEEA10012067A /* LoginVC.swift in Sources */,
 				094F93A11D1ED712005C46A4 /* NovoEventoVC.swift in Sources */,
 				094F93A71D1EDA19005C46A4 /* Eventos.swift in Sources */,
 				094F939F1D1ED709005C46A4 /* CadastroVC.swift in Sources */,
@@ -526,6 +530,7 @@
 				094F93901D1ED594005C46A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		094F93911D1ED594005C46A4 /* Build configuration list for PBXNativeTarget "angelaTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				094F93931D1ED594005C46A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		094F93941D1ED594005C46A4 /* Build configuration list for PBXNativeTarget "angelaUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +548,7 @@
 				094F93961D1ED594005C46A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
