@@ -10,8 +10,6 @@ import UIKit
 
 class CadastroViewController: UIViewController, UITextFieldDelegate {
     
-    //Imagem perfil
-    @IBOutlet weak var profilePicture: UIImageView!
     
     
     //Textfields
@@ -19,10 +17,10 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var telefoneTextfield: UITextField!
     @IBOutlet weak var senhaTextfield: UITextField!
-    @IBOutlet weak var ajudaTextfield: UITextField!
+    @IBOutlet weak var confirmaTextfield: UITextField!
     
     //Botoes
-    @IBOutlet weak var criarButton: UIButton!
+    @IBOutlet weak var proximoButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -32,7 +30,7 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
         emailTextfield.delegate = self
         telefoneTextfield.delegate = self
         senhaTextfield.delegate = self
-        ajudaTextfield.delegate = self
+        confirmaTextfield.delegate = self
         
     }
     

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="angela" customModuleProvider="target">
             <connections>
+                <outlet property="criarButton" destination="6fV-2T-YqX" id="3QC-Ga-wqx"/>
+                <outlet property="emailTextfield" destination="qvl-Gl-i53" id="GOb-h7-mtU"/>
+                <outlet property="esqueciSenhaButton" destination="ip7-TA-4Rv" id="bz5-2p-it0"/>
+                <outlet property="imagemBackground" destination="vS4-G8-F89" id="Td7-5s-9M0"/>
+                <outlet property="loginButton" destination="j65-R5-NOL" id="8cl-XO-XZv"/>
+                <outlet property="senhaTextfield" destination="R5F-2L-CJj" id="7mq-Iy-pOM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +20,78 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginViewController" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-G8-F89">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                    </variation>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5F-2L-CJj">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="112" y="366" width="175" height="30"/>
+                    </variation>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j65-R5-NOL">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Login"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="176" y="441" width="46" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="loginClicked:" destination="-1" eventType="touchUpInside" id="bZU-u5-GMr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ip7-TA-4Rv">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Esqueci minha senha "/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="119" y="479" width="163" height="30"/>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-2T-YqX">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Nao tenho conta. Criar agora!"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="93" y="517" width="214" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="criarClicked:" destination="-1" eventType="touchUpInside" id="yue-H4-wbK"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvl-Gl-i53">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="112" y="320" width="175" height="30"/>
+                    </variation>
+                </textField>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="vS4-G8-F89"/>
+                    <exclude reference="R5F-2L-CJj"/>
+                    <exclude reference="j65-R5-NOL"/>
+                    <exclude reference="ip7-TA-4Rv"/>
+                    <exclude reference="6fV-2T-YqX"/>
+                    <exclude reference="qvl-Gl-i53"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="vS4-G8-F89"/>
+                    <include reference="R5F-2L-CJj"/>
+                    <include reference="j65-R5-NOL"/>
+                    <include reference="ip7-TA-4Rv"/>
+                    <include reference="6fV-2T-YqX"/>
+                    <include reference="qvl-Gl-i53"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

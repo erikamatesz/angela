@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate{
+    
+    @IBOutlet weak var imagemBackground: UIImageView!
     
     //textfields
     @IBOutlet weak var emailTextfield: UITextField!
@@ -17,6 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //buttons
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var criarButton: UIButton!
+    @IBOutlet weak var esqueciSenhaButton: UIButton!
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,7 +37,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func loginClicked(sender: AnyObject) {
-    
+        
+        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
+           presentViewController(vc, animated: true, completion: nil)
     }
     
     @IBAction func criarClicked(sender: AnyObject) {

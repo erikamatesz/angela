@@ -22,9 +22,8 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
     @IBOutlet weak var horaFinal: UIDatePicker!
     
     @IBOutlet weak var notificacaoPicker: UIPickerView!
-    //collection
-    @IBOutlet weak var contatos: UICollectionViewCell!
-    
+  
+    @IBOutlet weak var proximoButton: UIButton!
     
     var notificacao = ["15m", "30m ", "1h", "2h", "3h"];
     
@@ -105,6 +104,10 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         {
             
         }
+        
+    }
+    @IBAction func proximoClicked(sender: AnyObject) {
+        
         
     }
 }

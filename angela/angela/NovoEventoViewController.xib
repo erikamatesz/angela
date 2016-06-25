@@ -1,19 +1,137 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NovoEventoViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NovoEventoViewController" customModule="angela" customModuleProvider="target">
             <connections>
+                <outlet property="horaFinal" destination="7FK-J3-Wf9" id="pvI-zf-DYK"/>
+                <outlet property="horaInicial" destination="7k7-VD-NjX" id="5sc-Mk-o5c"/>
+                <outlet property="lugarTextfield" destination="jav-wJ-l28" id="Vcj-Xt-bDn"/>
+                <outlet property="nomeTextfield" destination="ghm-lr-Nc9" id="yvK-zM-sQH"/>
+                <outlet property="notificacaoPicker" destination="IDd-PY-MrQ" id="uL1-5w-PZJ"/>
+                <outlet property="proximoButton" destination="W2x-pA-D2b" id="wEj-gc-Pag"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="NovoEventoViewController" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghm-lr-Nc9">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="40" y="42" width="97" height="30"/>
+                    </variation>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lugar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jav-wJ-l28">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="39" y="97" width="97" height="30"/>
+                    </variation>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora Inicial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKY-Yb-Kd1">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="40" y="177" width="102" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora Final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2n-H5-Ret">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="40" y="235" width="90" height="21"/>
+                    </variation>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7k7-VD-NjX">
+                    <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="488586286.41500002">
+                        <!--2016-06-25 22:24:46 +0000-->
+                    </date>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="222" y="165" width="158" height="45"/>
+                    </variation>
+                    <connections>
+                        <action selector="InicialClicked:" destination="-1" eventType="valueChanged" id="scW-fB-Sog"/>
+                    </connections>
+                </datePicker>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7FK-J3-Wf9">
+                    <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="488586286.41500002">
+                        <!--2016-06-25 22:24:46 +0000-->
+                    </date>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="222" y="223" width="158" height="45"/>
+                    </variation>
+                    <connections>
+                        <action selector="finalClicked:" destination="-1" eventType="valueChanged" id="oYr-1G-F6z"/>
+                    </connections>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificacoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCt-7u-pEn">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="44" y="343" width="133" height="21"/>
+                    </variation>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDd-PY-MrQ">
+                    <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="246" y="314" width="109" height="79"/>
+                    </variation>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2x-pA-D2b">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Proximo"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="152" y="488" width="84" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="proximoClicked:" destination="-1" eventType="touchUpInside" id="6hI-Py-V0c"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="ghm-lr-Nc9"/>
+                    <exclude reference="jav-wJ-l28"/>
+                    <exclude reference="gKY-Yb-Kd1"/>
+                    <exclude reference="V2n-H5-Ret"/>
+                    <exclude reference="7k7-VD-NjX"/>
+                    <exclude reference="7FK-J3-Wf9"/>
+                    <exclude reference="QCt-7u-pEn"/>
+                    <exclude reference="IDd-PY-MrQ"/>
+                    <exclude reference="W2x-pA-D2b"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="ghm-lr-Nc9"/>
+                    <include reference="jav-wJ-l28"/>
+                    <include reference="gKY-Yb-Kd1"/>
+                    <include reference="V2n-H5-Ret"/>
+                    <include reference="7k7-VD-NjX"/>
+                    <include reference="7FK-J3-Wf9"/>
+                    <include reference="QCt-7u-pEn"/>
+                    <include reference="IDd-PY-MrQ"/>
+                    <include reference="W2x-pA-D2b"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>
