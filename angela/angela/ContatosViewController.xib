@@ -15,6 +15,7 @@
                 <outlet property="contatoLabel1" destination="42y-Xy-NuY" id="RiY-NJ-Q3c"/>
                 <outlet property="contatoLabel2" destination="6eD-cJ-cZU" id="GLg-tV-1NQ"/>
                 <outlet property="contatoLabel3" destination="eyS-7d-GhM" id="fD7-gq-QuQ"/>
+                <outlet property="criarEventoButton" destination="I2g-KI-oMU" id="JF9-50-8Nv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -114,20 +115,6 @@
                         <action selector="addContato:" destination="-1" eventType="touchUpInside" id="yXR-hD-9GS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rz-ck-Ast">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Criar Evento"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="264" y="533" width="84" height="30"/>
-                    </variation>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-3q-ntf">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Voltar"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="84" y="533" width="41" height="30"/>
-                    </variation>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgZ-NP-9Cg">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Adicionar Acompanhante"/>
@@ -136,6 +123,16 @@
                     </variation>
                     <connections>
                         <action selector="addAcomp:" destination="-1" eventType="touchUpInside" id="EzZ-SS-Qkp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-KI-oMU">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Criar Evento"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="123" y="533" width="84" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="criarEvento:" destination="-1" eventType="touchUpInside" id="hcq-tB-8nZ"/>
                     </connections>
                 </button>
             </subviews>
@@ -151,9 +148,8 @@
                     <exclude reference="6eD-cJ-cZU"/>
                     <exclude reference="eyS-7d-GhM"/>
                     <exclude reference="jeU-3v-Yvk"/>
-                    <exclude reference="7rz-ck-Ast"/>
-                    <exclude reference="bdj-3q-ntf"/>
                     <exclude reference="PgZ-NP-9Cg"/>
+                    <exclude reference="I2g-KI-oMU"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -167,9 +163,8 @@
                     <include reference="6eD-cJ-cZU"/>
                     <include reference="eyS-7d-GhM"/>
                     <include reference="jeU-3v-Yvk"/>
-                    <include reference="7rz-ck-Ast"/>
-                    <include reference="bdj-3q-ntf"/>
                     <include reference="PgZ-NP-9Cg"/>
+                    <include reference="I2g-KI-oMU"/>
                 </mask>
             </variation>
         </view>

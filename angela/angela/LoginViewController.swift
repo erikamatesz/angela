@@ -26,6 +26,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     emailTextfield.delegate = self
     senhaTextfield.delegate = self
+        
+    let emailPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.emailTextfield.frame.height))
+    emailTextfield.leftView = emailPaddingView
+    emailTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+    let senhaPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.senhaTextfield.frame.height))
+    senhaTextfield.leftView = senhaPaddingView
+    senhaTextfield.leftViewMode = UITextFieldViewMode.Always
     
     // Do any additional setup after loading the view, typically from a nib.
     }
@@ -35,6 +43,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     return true
     }
     
+    // Teclado sumir com toque
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    
     
     @IBAction func loginClicked(sender: AnyObject) {
         
@@ -43,6 +58,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func criarClicked(sender: AnyObject) {
+        
+        let vc = CadastroViewController(nibName:"CadastroViewController", bundle: nil)
+        presentViewController(vc, animated: true, completion: nil)
+        
+        
     
     }
     

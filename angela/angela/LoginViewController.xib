@@ -17,29 +17,37 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="LoginViewController" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginViewController" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-G8-F89">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-G8-F89">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                     </variation>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5F-2L-CJj">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="R5F-2L-CJj">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="112" y="366" width="175" height="30"/>
+                        <rect key="frame" x="39" y="366" width="320" height="50"/>
                     </variation>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j65-R5-NOL">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j65-R5-NOL">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Login"/>
+                    <state key="normal" image="botao">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="176" y="441" width="46" height="30"/>
+                        <rect key="frame" x="39" y="451" width="320" height="50"/>
                     </variation>
                     <connections>
                         <action selector="loginClicked:" destination="-1" eventType="touchUpInside" id="bZU-u5-GMr"/>
@@ -47,29 +55,63 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ip7-TA-4Rv">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Esqueci minha senha "/>
+                    <state key="normal" title="Esqueci minha senha ">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="119" y="479" width="163" height="30"/>
+                        <rect key="frame" x="119" y="509" width="163" height="30"/>
                     </variation>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="qvl-Gl-i53">
+                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="40" y="308" width="320" height="50"/>
+                    </variation>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participe de seus eventos com segurança e tranquilidade" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cN-gQ-ecX">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="60" y="195" width="280" height="76"/>
+                    </variation>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="M4O-il-d0a">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="80" y="59" width="240" height="128"/>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY5-eG-iwQ">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="178" y="465" width="42" height="21"/>
+                    </variation>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-2T-YqX">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Nao tenho conta. Criar agora!"/>
+                    <state key="normal" title="Ainda não possui cadastro? Cadastre-se!">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="93" y="517" width="214" height="30"/>
+                        <rect key="frame" x="52" y="541" width="288" height="30"/>
                     </variation>
                     <connections>
                         <action selector="criarClicked:" destination="-1" eventType="touchUpInside" id="yue-H4-wbK"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvl-Gl-i53">
-                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="112" y="320" width="175" height="30"/>
-                    </variation>
-                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <variation key="default">
@@ -78,8 +120,11 @@
                     <exclude reference="R5F-2L-CJj"/>
                     <exclude reference="j65-R5-NOL"/>
                     <exclude reference="ip7-TA-4Rv"/>
-                    <exclude reference="6fV-2T-YqX"/>
                     <exclude reference="qvl-Gl-i53"/>
+                    <exclude reference="8cN-gQ-ecX"/>
+                    <exclude reference="M4O-il-d0a"/>
+                    <exclude reference="SY5-eG-iwQ"/>
+                    <exclude reference="6fV-2T-YqX"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -88,10 +133,19 @@
                     <include reference="R5F-2L-CJj"/>
                     <include reference="j65-R5-NOL"/>
                     <include reference="ip7-TA-4Rv"/>
-                    <include reference="6fV-2T-YqX"/>
                     <include reference="qvl-Gl-i53"/>
+                    <include reference="8cN-gQ-ecX"/>
+                    <include reference="M4O-il-d0a"/>
+                    <include reference="SY5-eG-iwQ"/>
+                    <include reference="6fV-2T-YqX"/>
                 </mask>
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="Logo-2" width="486" height="152"/>
+        <image name="botao" width="552" height="102"/>
+        <image name="fundo" width="750" height="1334"/>
+        <image name="textfield" width="550" height="100"/>
+    </resources>
 </document>

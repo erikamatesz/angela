@@ -10,6 +10,7 @@
                 <outlet property="confirmaTextfield" destination="9co-Vg-4FK" id="aqf-ey-26m"/>
                 <outlet property="emailTextfield" destination="iyK-ua-SXb" id="TmP-Kf-hA3"/>
                 <outlet property="nomeTextfield" destination="1wv-bO-M6y" id="5gy-Fh-nfm"/>
+                <outlet property="proximoButton" destination="dsC-ak-XTd" id="kg6-uE-lGp"/>
                 <outlet property="senhaTextfield" destination="mBh-gW-5SJ" id="T6J-Vo-T5q"/>
                 <outlet property="telefoneTextfield" destination="C9f-78-9iF" id="pVw-kQ-mhT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,58 +21,97 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-ak-XTd">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-ak-XTd">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Proximo "/>
+                    <state key="normal" title="Proximo " image="botao"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="149" y="466" width="103" height="30"/>
+                        <rect key="frame" x="68" y="430" width="265" height="43"/>
                     </variation>
                     <connections>
-                        <action selector="criarClicked:" destination="-1" eventType="touchUpInside" id="Ahc-W5-vKr"/>
+                        <action selector="proximoClicked:" destination="-1" eventType="touchUpInside" id="6Qc-qH-nR7"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wv-bO-M6y">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="1wv-bO-M6y">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="98" y="75" width="221" height="30"/>
+                        <rect key="frame" x="40" y="55" width="320" height="50"/>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBh-gW-5SJ">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="mBh-gW-5SJ">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="98" y="225" width="221" height="30"/>
+                        <rect key="frame" x="40" y="258" width="320" height="50"/>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9f-78-9iF">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="C9f-78-9iF">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="98" y="176" width="221" height="30"/>
+                        <rect key="frame" x="40" y="192" width="320" height="50"/>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iyK-ua-SXb">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="iyK-ua-SXb">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="98" y="124" width="221" height="30"/>
+                        <rect key="frame" x="40" y="125" width="320" height="50"/>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9co-Vg-4FK">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQI-Vi-SNZ">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="165" y="441" width="71" height="21"/>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmar senha" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="9co-Vg-4FK">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="98" y="278" width="221" height="30"/>
+                        <rect key="frame" x="40" y="325" width="320" height="50"/>
                     </variation>
                 </textField>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.65098039215686276" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="dsC-ak-XTd"/>
@@ -79,6 +119,7 @@
                     <exclude reference="mBh-gW-5SJ"/>
                     <exclude reference="C9f-78-9iF"/>
                     <exclude reference="iyK-ua-SXb"/>
+                    <exclude reference="AQI-Vi-SNZ"/>
                     <exclude reference="9co-Vg-4FK"/>
                 </mask>
             </variation>
@@ -89,9 +130,14 @@
                     <include reference="mBh-gW-5SJ"/>
                     <include reference="C9f-78-9iF"/>
                     <include reference="iyK-ua-SXb"/>
+                    <include reference="AQI-Vi-SNZ"/>
                     <include reference="9co-Vg-4FK"/>
                 </mask>
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="botao" width="552" height="102"/>
+        <image name="textfield" width="550" height="100"/>
+    </resources>
 </document>
