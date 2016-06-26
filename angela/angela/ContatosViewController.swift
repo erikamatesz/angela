@@ -22,6 +22,9 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
     @IBOutlet weak var contatoLabel3: UILabel!
     @IBOutlet weak var addContatoButton: UIButton!
     
+    @IBOutlet weak var criarEventoButton: UIButton!
+    
+    
     var statePick = 0
     var numPickAcomp = 0
     var numPickContato = 0
@@ -98,6 +101,14 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         displayContacts()
     }
     
+    @IBAction func criarEvento(sender: AnyObject) {
+        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
+                presentViewController(vc, animated: true, completion: nil)
+    }
+//    @IBAction func criarEvento(sender: AnyObject) {
+//        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
+//        presentViewController(vc, animated: true, completion: nil)
+//    }
     
     /*
     // MARK: - Navigation
