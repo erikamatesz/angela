@@ -53,6 +53,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func loginClicked(sender: AnyObject) {
         
+//        if DAO.isConnected() {
+//            
+////            if DAO.userLogin(<#T##email: String##String#>, password: <#T##String#>) { // exibe o vc 
+//            
+//                
+//                
+//            } else {
+//                // erro no login mostra alerta 
+//            
+//            }
+//            
+//        } else {
+//        
+//            // exibir alerta informando que não tem conexão
+//        
+//        }
+        
+        
         let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
            presentViewController(vc, animated: true, completion: nil)
     }
