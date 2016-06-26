@@ -108,6 +108,9 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
     }
     @IBAction func proximoClicked(sender: AnyObject) {
         
+        let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
+        presentViewController(vc, animated: true, completion: nil)
+        
         
     }
 }

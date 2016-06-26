@@ -32,14 +32,46 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
         senhaTextfield.delegate = self
         confirmaTextfield.delegate = self
         
-    }
+        
+        // Espaço do placeholder da borda do textfield
+        let nomePaddingView = UIView(frame: CGRectMake(0, 0, 15, self.nomeTextfield.frame.height))
+        nomeTextfield.leftView = nomePaddingView
+        nomeTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+        let emailPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.emailTextfield.frame.height))
+        emailTextfield.leftView = emailPaddingView
+        emailTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+        let telefonePaddingView = UIView(frame: CGRectMake(0, 0, 15, self.telefoneTextfield.frame.height))
+        telefoneTextfield.leftView = telefonePaddingView
+        telefoneTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+        let senhaPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.senhaTextfield.frame.height))
+        senhaTextfield.leftView = senhaPaddingView
+        senhaTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+        let confirmaPaddingView = UIView(frame: CGRectMake(0, 0, 15,
+            self.confirmaTextfield.frame.height))
+        confirmaTextfield.leftView = confirmaPaddingView
+        confirmaTextfield.leftViewMode = UITextFieldViewMode.Always
+
+}
+    
+    // Teclado sumir
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
-    @IBAction func criarClicked(sender: AnyObject) {
+    
+    @IBAction func proximoClicked(sender: AnyObject) {
+        
+        let vc = Cadastro2ViewController(nibName:"Cadastro2ViewController", bundle: nil)
+        presentViewController(vc, animated: true, completion: nil)
         
         
     }

@@ -30,6 +30,7 @@
 		86E066711D1F3994002203F6 /* Cadastro2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E0666F1D1F3994002203F6 /* Cadastro2ViewController.xib */; };
 		86E066741D1F444A002203F6 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E066721D1F444A002203F6 /* ContatosViewController.swift */; };
 		86E066751D1F444A002203F6 /* ContatosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E066731D1F444A002203F6 /* ContatosViewController.xib */; };
+		86E066781D1F5167002203F6 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E066771D1F5167002203F6 /* DAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		86E0666F1D1F3994002203F6 /* Cadastro2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cadastro2ViewController.xib; sourceTree = "<group>"; };
 		86E066721D1F444A002203F6 /* ContatosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
 		86E066731D1F444A002203F6 /* ContatosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatosViewController.xib; sourceTree = "<group>"; };
+		86E066771D1F5167002203F6 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		094F93971D1ED5BE005C46A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				86E066761D1F514D002203F6 /* DAO */,
 				094F93B81D1EFC5E005C46A4 /* SwiftyJSON.swift */,
 				094F93A41D1ED92D005C46A4 /* Usuario.swift */,
 				094F93A61D1EDA19005C46A4 /* Eventos.swift */,
@@ -195,6 +198,14 @@
 				094F936D1D1ED594005C46A4 /* Main.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		86E066761D1F514D002203F6 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				86E066771D1F5167002203F6 /* DAO.swift */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				094F93B91D1EFC5E005C46A4 /* SwiftyJSON.swift in Sources */,
 				094F936A1D1ED594005C46A4 /* AppDelegate.swift in Sources */,
 				094F93A51D1ED92D005C46A4 /* Usuario.swift in Sources */,
+				86E066781D1F5167002203F6 /* DAO.swift in Sources */,
 				094F93C21D1F3120005C46A4 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
