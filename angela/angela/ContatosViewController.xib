@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContatosViewController" customModule="angela" customModuleProvider="target">
             <connections>
                 <outlet property="acompLabel1" destination="QHQ-no-iav" id="6Bo-gr-1Bx"/>
-                <outlet property="acompLabel2" destination="5DV-Mg-rSo" id="s9D-B5-z3Y"/>
-                <outlet property="acompLabel3" destination="18V-7H-UFb" id="18r-Gi-rf2"/>
                 <outlet property="addAcompButton" destination="PgZ-NP-9Cg" id="a0y-zz-rHu"/>
                 <outlet property="addContatoButton" destination="jeU-3v-Yvk" id="Yi1-G1-0gP"/>
                 <outlet property="contatoLabel1" destination="42y-Xy-NuY" id="RiY-NJ-Q3c"/>
-                <outlet property="contatoLabel2" destination="6eD-cJ-cZU" id="GLg-tV-1NQ"/>
-                <outlet property="contatoLabel3" destination="eyS-7d-GhM" id="fD7-gq-QuQ"/>
                 <outlet property="criarEventoButton" destination="I2g-KI-oMU" id="JF9-50-8Nv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,149 +20,211 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Criar Evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pog-SX-znR">
-                    <rect key="frame" x="44" y="76" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="153" y="8" width="94" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Acompanhantes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTA-Zx-wBS">
-                    <rect key="frame" x="44" y="76" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="49" width="129" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contatos de Emergência:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfV-B0-sAO">
-                    <rect key="frame" x="44" y="76" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="249" width="193" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompanhante 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHQ-no-iav">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompanhante 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHQ-no-iav">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="4pU-Kx-Ydo"/>
+                        <constraint firstAttribute="width" constant="384" id="wnN-KT-Upe"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="95" width="384" height="21"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="4pU-Kx-Ydo"/>
+                            <exclude reference="wnN-KT-Upe"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="4pU-Kx-Ydo"/>
+                            <include reference="wnN-KT-Upe"/>
+                        </mask>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompanhante 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DV-Mg-rSo">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="130" width="384" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompanhante 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18V-7H-UFb">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="167" width="384" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42y-Xy-NuY">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="293" width="384" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eD-cJ-cZU">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="328" width="384" height="21"/>
-                    </variation>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyS-7d-GhM">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="365" width="384" height="21"/>
-                    </variation>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-3v-Yvk">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgZ-NP-9Cg">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Adicionar Contato de Emergência"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="163" y="394" width="229" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="7uB-zm-6Nl"/>
+                        <constraint firstAttribute="width" constant="320" id="MXl-cM-Hie"/>
+                    </constraints>
+                    <state key="normal" title="Adicionar Acompanhante" image="botao"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7uB-zm-6Nl"/>
+                            <exclude reference="MXl-cM-Hie"/>
+                        </mask>
                     </variation>
-                    <connections>
-                        <action selector="addContato:" destination="-1" eventType="touchUpInside" id="yXR-hD-9GS"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgZ-NP-9Cg">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Adicionar Acompanhante"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="220" y="196" width="172" height="30"/>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7uB-zm-6Nl"/>
+                            <include reference="MXl-cM-Hie"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="addAcomp:" destination="-1" eventType="touchUpInside" id="EzZ-SS-Qkp"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-KI-oMU">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Criar Evento"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Acompanhante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPK-ig-COh">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="123" y="533" width="84" height="30"/>
+                        <rect key="frame" x="94" y="80" width="213" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42y-Xy-NuY">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="IWM-lf-di8"/>
+                        <constraint firstAttribute="width" constant="384" id="MFv-tV-5tM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="IWM-lf-di8"/>
+                            <exclude reference="MFv-tV-5tM"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="IWM-lf-di8"/>
+                            <include reference="MFv-tV-5tM"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-3v-Yvk">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="WAI-hT-agb"/>
+                        <constraint firstAttribute="height" constant="50" id="zhc-Ln-dWo"/>
+                    </constraints>
+                    <state key="normal" title="Adicionar Contato de Emergência" image="botao"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="WAI-hT-agb"/>
+                            <exclude reference="zhc-Ln-dWo"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="WAI-hT-agb"/>
+                            <include reference="zhc-Ln-dWo"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="addContato:" destination="-1" eventType="touchUpInside" id="yXR-hD-9GS"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Contato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCG-hZ-VS7">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="121" y="322" width="159" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-lJ-kOu">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="179" y="523" width="42" height="21"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-KI-oMU">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="WZC-Da-IFX"/>
+                        <constraint firstAttribute="height" constant="50" id="gbV-yi-h1n"/>
+                    </constraints>
+                    <state key="normal" title="Criar Evento" image="botao"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="WZC-Da-IFX"/>
+                            <exclude reference="gbV-yi-h1n"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="WZC-Da-IFX"/>
+                            <include reference="gbV-yi-h1n"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="criarEvento:" destination="-1" eventType="touchUpInside" id="hcq-tB-8nZ"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.56862745098039214" green="0.25098039215686274" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="I2g-KI-oMU" firstAttribute="top" secondItem="42y-Xy-NuY" secondAttribute="bottom" constant="96" id="3rS-tp-ouk"/>
+                <constraint firstItem="42y-Xy-NuY" firstAttribute="top" secondItem="jeU-3v-Yvk" secondAttribute="bottom" constant="34" id="AwP-tZ-02h"/>
+                <constraint firstItem="PgZ-NP-9Cg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="BHA-YZ-pXO"/>
+                <constraint firstItem="PgZ-NP-9Cg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F6y-XO-g8D"/>
+                <constraint firstItem="I2g-KI-oMU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M54-A3-FR8"/>
+                <constraint firstItem="QHQ-no-iav" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VJ2-Cc-Wdg"/>
+                <constraint firstItem="42y-Xy-NuY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y40-lt-Ixb"/>
+                <constraint firstItem="QHQ-no-iav" firstAttribute="top" secondItem="PgZ-NP-9Cg" secondAttribute="bottom" constant="25" id="jjJ-W3-uFn"/>
+                <constraint firstItem="jeU-3v-Yvk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ua6-oj-CaC"/>
+                <constraint firstItem="jeU-3v-Yvk" firstAttribute="top" secondItem="QHQ-no-iav" secondAttribute="bottom" constant="146" id="zWD-eE-BDB"/>
+            </constraints>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="rTA-Zx-wBS"/>
-                    <exclude reference="SfV-B0-sAO"/>
                     <exclude reference="QHQ-no-iav"/>
-                    <exclude reference="5DV-Mg-rSo"/>
-                    <exclude reference="18V-7H-UFb"/>
-                    <exclude reference="42y-Xy-NuY"/>
-                    <exclude reference="6eD-cJ-cZU"/>
-                    <exclude reference="eyS-7d-GhM"/>
-                    <exclude reference="jeU-3v-Yvk"/>
                     <exclude reference="PgZ-NP-9Cg"/>
+                    <exclude reference="rPK-ig-COh"/>
+                    <exclude reference="42y-Xy-NuY"/>
+                    <exclude reference="jeU-3v-Yvk"/>
+                    <exclude reference="vCG-hZ-VS7"/>
+                    <exclude reference="zG3-lJ-kOu"/>
                     <exclude reference="I2g-KI-oMU"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="BHA-YZ-pXO"/>
+                    <exclude reference="F6y-XO-g8D"/>
+                    <exclude reference="VJ2-Cc-Wdg"/>
+                    <exclude reference="jjJ-W3-uFn"/>
+                    <exclude reference="ua6-oj-CaC"/>
+                    <exclude reference="zWD-eE-BDB"/>
+                    <exclude reference="AwP-tZ-02h"/>
+                    <exclude reference="Y40-lt-Ixb"/>
+                    <exclude reference="3rS-tp-ouk"/>
+                    <exclude reference="M54-A3-FR8"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
-                    <include reference="rTA-Zx-wBS"/>
-                    <include reference="SfV-B0-sAO"/>
                     <include reference="QHQ-no-iav"/>
-                    <include reference="5DV-Mg-rSo"/>
-                    <include reference="18V-7H-UFb"/>
-                    <include reference="42y-Xy-NuY"/>
-                    <include reference="6eD-cJ-cZU"/>
-                    <include reference="eyS-7d-GhM"/>
-                    <include reference="jeU-3v-Yvk"/>
                     <include reference="PgZ-NP-9Cg"/>
+                    <include reference="rPK-ig-COh"/>
+                    <include reference="42y-Xy-NuY"/>
+                    <include reference="jeU-3v-Yvk"/>
+                    <include reference="vCG-hZ-VS7"/>
+                    <include reference="zG3-lJ-kOu"/>
                     <include reference="I2g-KI-oMU"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="BHA-YZ-pXO"/>
+                    <include reference="F6y-XO-g8D"/>
+                    <include reference="VJ2-Cc-Wdg"/>
+                    <include reference="jjJ-W3-uFn"/>
+                    <include reference="ua6-oj-CaC"/>
+                    <include reference="zWD-eE-BDB"/>
+                    <include reference="AwP-tZ-02h"/>
+                    <include reference="Y40-lt-Ixb"/>
+                    <include reference="3rS-tp-ouk"/>
+                    <include reference="M54-A3-FR8"/>
                 </mask>
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="botao" width="552" height="102"/>
+    </resources>
 </document>

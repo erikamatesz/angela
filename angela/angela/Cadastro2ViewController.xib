@@ -22,6 +22,10 @@
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha estou ok" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-R2-23S">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8oX-gF-NEH"/>
+                        <constraint firstAttribute="width" constant="320" id="l1F-Ze-ff0"/>
+                    </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -30,12 +34,25 @@
                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="37" y="71" width="320" height="50"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8oX-gF-NEH"/>
+                            <exclude reference="l1F-Ze-ff0"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="8oX-gF-NEH"/>
+                            <include reference="l1F-Ze-ff0"/>
+                        </mask>
                     </variation>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirmar senha estou ok" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-Gm-OnQ">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="elU-a7-TN3"/>
+                        <constraint firstAttribute="height" constant="50" id="wrQ-Ve-5It"/>
+                    </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -44,12 +61,25 @@
                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="37" y="150" width="320" height="50"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="elU-a7-TN3"/>
+                            <exclude reference="wrQ-Ve-5It"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="elU-a7-TN3"/>
+                            <include reference="wrQ-Ve-5It"/>
+                        </mask>
                     </variation>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha deu merda" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="ia5-vx-wu7">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="vRs-mv-WeO"/>
+                        <constraint firstAttribute="width" constant="320" id="xHQ-l9-7gu"/>
+                    </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -58,12 +88,25 @@
                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="40" y="231" width="320" height="50"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="vRs-mv-WeO"/>
+                            <exclude reference="xHQ-l9-7gu"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="vRs-mv-WeO"/>
+                            <include reference="xHQ-l9-7gu"/>
+                        </mask>
                     </variation>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirmar senha deu merda" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-vn-lrn">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UKf-MF-vuO"/>
+                        <constraint firstAttribute="width" constant="320" id="ldw-W8-ASY"/>
+                    </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -72,31 +115,82 @@
                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="40" y="310" width="320" height="50"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="UKf-MF-vuO"/>
+                            <exclude reference="ldw-W8-ASY"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="UKf-MF-vuO"/>
+                            <include reference="ldw-W8-ASY"/>
+                        </mask>
                     </variation>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTE-jx-bTh">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Cvh-Kq-Vrt"/>
+                        <constraint firstAttribute="width" constant="320" id="Lyb-Te-pHw"/>
+                    </constraints>
                     <state key="normal" title=" " image="botao"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="40" y="418" width="320" height="50"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Cvh-Kq-Vrt"/>
+                            <exclude reference="Lyb-Te-pHw"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Cvh-Kq-Vrt"/>
+                            <include reference="Lyb-Te-pHw"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="cadastrarClicked:" destination="-1" eventType="touchUpInside" id="lSG-2q-ROH"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZO-zM-5zT">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjL-Fe-InF">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="92" id="MAo-7G-Dt1"/>
+                        <constraint firstAttribute="height" constant="21" id="jc3-5L-Xk2"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="156" y="432" width="88" height="21"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="MAo-7G-Dt1"/>
+                            <exclude reference="jc3-5L-Xk2"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="MAo-7G-Dt1"/>
+                            <include reference="jc3-5L-Xk2"/>
+                        </mask>
                     </variation>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.32549019607843138" green="0.73725490196078436" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="IOC-R2-23S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="2G8-yO-7rx">
+                    <variation key="widthClass=compact" constant="149"/>
+                </constraint>
+                <constraint firstItem="IOC-R2-23S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Pfp-kQ-GeC"/>
+                <constraint firstItem="bZX-Gm-OnQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QVX-Gh-KYj"/>
+                <constraint firstItem="KuA-vn-lrn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R22-8q-yZo"/>
+                <constraint firstItem="ia5-vx-wu7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RVL-x1-OhC"/>
+                <constraint firstItem="gjL-Fe-InF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RtU-lR-VkC"/>
+                <constraint firstItem="ZTE-jx-bTh" firstAttribute="top" secondItem="KuA-vn-lrn" secondAttribute="bottom" constant="58" id="WSO-6j-Wj0"/>
+                <constraint firstItem="KuA-vn-lrn" firstAttribute="top" secondItem="ia5-vx-wu7" secondAttribute="bottom" constant="29" id="X5n-vb-g1U"/>
+                <constraint firstItem="gjL-Fe-InF" firstAttribute="top" secondItem="KuA-vn-lrn" secondAttribute="bottom" constant="72" id="dzr-mH-H8k"/>
+                <constraint firstItem="ia5-vx-wu7" firstAttribute="top" secondItem="bZX-Gm-OnQ" secondAttribute="bottom" constant="31" id="f4H-zj-Zf3"/>
+                <constraint firstItem="bZX-Gm-OnQ" firstAttribute="top" secondItem="IOC-R2-23S" secondAttribute="bottom" constant="29" id="n3O-6w-dBP"/>
+                <constraint firstItem="ZTE-jx-bTh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qQq-wd-GDd"/>
+            </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="IOC-R2-23S"/>
@@ -104,7 +198,21 @@
                     <exclude reference="ia5-vx-wu7"/>
                     <exclude reference="KuA-vn-lrn"/>
                     <exclude reference="ZTE-jx-bTh"/>
-                    <exclude reference="zZO-zM-5zT"/>
+                    <exclude reference="gjL-Fe-InF"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="2G8-yO-7rx"/>
+                    <exclude reference="Pfp-kQ-GeC"/>
+                    <exclude reference="QVX-Gh-KYj"/>
+                    <exclude reference="n3O-6w-dBP"/>
+                    <exclude reference="RVL-x1-OhC"/>
+                    <exclude reference="f4H-zj-Zf3"/>
+                    <exclude reference="R22-8q-yZo"/>
+                    <exclude reference="X5n-vb-g1U"/>
+                    <exclude reference="WSO-6j-Wj0"/>
+                    <exclude reference="qQq-wd-GDd"/>
+                    <exclude reference="RtU-lR-VkC"/>
+                    <exclude reference="dzr-mH-H8k"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -114,9 +222,24 @@
                     <include reference="ia5-vx-wu7"/>
                     <include reference="KuA-vn-lrn"/>
                     <include reference="ZTE-jx-bTh"/>
-                    <include reference="zZO-zM-5zT"/>
+                    <include reference="gjL-Fe-InF"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="2G8-yO-7rx"/>
+                    <include reference="Pfp-kQ-GeC"/>
+                    <include reference="QVX-Gh-KYj"/>
+                    <include reference="n3O-6w-dBP"/>
+                    <include reference="RVL-x1-OhC"/>
+                    <include reference="f4H-zj-Zf3"/>
+                    <include reference="R22-8q-yZo"/>
+                    <include reference="X5n-vb-g1U"/>
+                    <include reference="WSO-6j-Wj0"/>
+                    <include reference="qQq-wd-GDd"/>
+                    <include reference="RtU-lR-VkC"/>
+                    <include reference="dzr-mH-H8k"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="345" y="433"/>
         </view>
     </objects>
     <resources>

@@ -12,6 +12,8 @@ import ContactsUI
 
 class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CNContactPickerDelegate {
     
+    var InicialSalva: String!
+
     
     @IBOutlet weak var inicialLabel: UILabel!
     @IBOutlet weak var finalLabel: UILabel!
@@ -41,6 +43,18 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         self.notificacaoPicker.delegate = self;
         
         
+        let nomePaddingView = UIView(frame: CGRectMake(0, 0, 15, self.nomeTextfield.frame.height))
+        nomeTextfield.leftView = nomePaddingView
+        nomeTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+        let lugarPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.lugarTextfield.frame.height))
+        lugarTextfield.leftView = lugarPaddingView
+        lugarTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setValue(<#T##value: AnyObject?##AnyObject?#>, forKey: <#T##String#>)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -52,10 +66,13 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         
-        let textLabel = dateFormatter.stringFromDate(horaInicial.date)
-        inicialLabel.text = textLabel
+        // pegando string da data 
+        let dateLabelInicial = UILabel()
+        let stringDate = dateFormatter.stringFromDate(horaInicial.date)
+        dateLabelInicial.text = stringDate
+        print(dateLabelInicial)
         
-        
+    
     }
     
     @IBAction func finalClicked(sender: AnyObject) {
@@ -65,8 +82,14 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         
-        let textLabel = dateFormatter.stringFromDate(horaInicial.date)
-        finalLabel.text = textLabel
+        // pegando string da data
+        let dateLabelFinal = UILabel()
+        let stringDate = dateFormatter.stringFromDate(horaFinal.date)
+        dateLabelFinal.text = stringDate
+        print(dateLabelFinal)
+        
+        
+
         
     }
     
@@ -111,15 +134,11 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
     
     
     @IBAction func proximoClicked(sender: AnyObject) {
-<<<<<<< HEAD
         
         let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
-        
-=======
-        let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
-        presentViewController(vc, animated: true, completion: nil)
->>>>>>> 44c363c130f6eb15258305771e31cd127f0f7f19
         
     }
+    
+    
 }

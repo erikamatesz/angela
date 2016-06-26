@@ -11,9 +11,13 @@ import UIKit
 class EventoViewController: UIViewController{
     
     @IBOutlet weak var criarButton: UIButton!
+    var toPass: String!
+    @IBOutlet weak var nome: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nome.text = toPass
         
         
     }
