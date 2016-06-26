@@ -102,10 +102,18 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
     }
     
     @IBAction func criarEvento(sender: AnyObject) {
-        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
-                presentViewController(vc, animated: true, completion: nil)
-    }
-//    @IBAction func criarEvento(sender: AnyObject) {
+        
+            
+                    let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
+                            presentViewController(vc, animated: true, completion: nil)
+            
+         
+        }
+
+
+    
+    
+   //    @IBAction func criarEvento(sender: AnyObject) {
 //        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
 //        presentViewController(vc, animated: true, completion: nil)
 //    }
