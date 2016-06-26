@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092C9EEE1D2018B60003981E /* angelapp_back in Resources */ = {isa = PBXBuildFile; fileRef = 092C9EED1D2018B60003981E /* angelapp_back */; };
 		094F936A1D1ED594005C46A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93691D1ED594005C46A4 /* AppDelegate.swift */; };
 		094F936C1D1ED594005C46A4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F936B1D1ED594005C46A4 /* MainViewController.swift */; };
 		094F936F1D1ED594005C46A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094F936D1D1ED594005C46A4 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092C9EED1D2018B60003981E /* angelapp_back */ = {isa = PBXFileReference; lastKnownFileType = folder; path = angelapp_back; sourceTree = "<group>"; };
 		094F93661D1ED594005C46A4 /* angela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = angela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094F93691D1ED594005C46A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		094F936B1D1ED594005C46A4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		094F93681D1ED594005C46A4 /* angela */ = {
 			isa = PBXGroup;
 			children = (
+				092C9EED1D2018B60003981E /* angelapp_back */,
 				094F93971D1ED5BE005C46A4 /* Model */,
 				094F93981D1ED5C5005C46A4 /* Controller */,
 				094F93991D1ED5CB005C46A4 /* View */,
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				094F93C31D1F3120005C46A4 /* LoginViewController.xib in Resources */,
+				092C9EEE1D2018B60003981E /* angelapp_back in Resources */,
 				094F93741D1ED594005C46A4 /* LaunchScreen.storyboard in Resources */,
 				094F93CB1D1F31C9005C46A4 /* NovoEventoViewController.xib in Resources */,
 				094F93711D1ED594005C46A4 /* Assets.xcassets in Resources */,

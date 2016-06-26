@@ -49,13 +49,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     // Teclado sumir com toque
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
 
     
-    
+    // Clique para logar
     @IBAction func loginClicked(sender: AnyObject) {
         
         if DAO.isConnected() {
@@ -68,25 +67,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 presentViewController(vc, animated: true, completion: nil)
             
             } else {
-            
-                print("deu ruim no login")
-            
+                print("Falha no login")
             }
             
         } else {
-        
-            print("deu ruim na internet")
-        
+            print("Falha na conexao com a internet")
         }
         
     }
     
     @IBAction func criarClicked(sender: AnyObject) {
-        
         let vc = CadastroViewController(nibName:"CadastroViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
-        
-        
     
     }
     

@@ -37,24 +37,15 @@ class EventoViewController: UIViewController{
         }
     }
     
-  
-     
-   
+    // Clicar para criar novo evento e mudar de tela
     @IBAction func criarClicked(sender: AnyObject) {
-        
         let vc = NovoEventoViewController(nibName:"NovoEventoViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
-
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
     
 }

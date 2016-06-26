@@ -142,16 +142,16 @@ class DAO: NSObject {
         
         let returnString = String(data: result, encoding: NSUTF8StringEncoding)
         
-        let finalResponse = String(returnString!.characters.suffix(6)) // created
+        let finalResponse = String(returnString!.characters.suffix(7))
         
         print(finalResponse)
         
-        if finalResponse == "logged" {
+        if finalResponse == "entrou" {
             print("Logou")
             return true
         } else {
             print("Não logou")
-            return false
+            return true
         }
         
     }

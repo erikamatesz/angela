@@ -20,16 +20,6 @@ class Cadastro2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Espaço do placeholder da borda do textfield
-//        let senhaPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.senhaOkTextfield.frame.height))
-//        senhaOkTextfield.leftView = senhaPaddingView
-//        senhaOkTextfield.leftViewMode = UITextFieldViewMode.Always
-//        
-//        let confirmaPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.confirmaOkTextfield.frame.height))
-//        confirmaOkTextfield.leftView = confirmaPaddingView
-//        confirmaOkTextfield.leftViewMode = UITextFieldViewMode.Always
-        
         let deuRuimPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.senhaDeuRuimTextfield.frame.height))
         senhaDeuRuimTextfield.leftView = deuRuimPaddingView
         senhaDeuRuimTextfield.leftViewMode = UITextFieldViewMode.Always
@@ -37,11 +27,6 @@ class Cadastro2ViewController: UIViewController {
         let confirmaRuimPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.confirmarDeuRuimTextfield.frame.height))
         confirmarDeuRuimTextfield.leftView = confirmaRuimPaddingView
         confirmarDeuRuimTextfield.leftViewMode = UITextFieldViewMode.Always
-        
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,7 +35,6 @@ class Cadastro2ViewController: UIViewController {
     }
     
     // Teclado sumir
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -60,7 +44,7 @@ class Cadastro2ViewController: UIViewController {
     }
     
     
-    
+    // Cloque para cadastrar usuario
     @IBAction func cadastrarClicked(sender: AnyObject) {
         
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -81,28 +65,14 @@ class Cadastro2ViewController: UIViewController {
                 presentViewController(vc, animated: true, completion: nil)
                 
             } else {
-            
-                // colocar alerta sobre NÃO ter feito o cadastro com sucesso
-                print("deu ruim no cadastro")
-                
+                print("Falha no cadastro")
             }
             
         } else {
-            
-            // colocar alerta sobre NÃO estar conectado à internet
-            print("deu ruim na internet")
+            print("Falha na conexao com a internet")
             
         }
         
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

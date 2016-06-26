@@ -168,16 +168,16 @@
                     <exclude reference="gjL-Fe-InF"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="gMP-S6-uSg"/>
+                    <exclude reference="tPt-bV-bMX"/>
+                    <exclude reference="RTg-yD-HXr"/>
+                    <exclude reference="oj0-KG-0TD"/>
+                    <exclude reference="G1p-xr-avm"/>
+                    <exclude reference="GqF-h3-stN"/>
                     <exclude reference="OUK-Ws-AFy"/>
                     <exclude reference="fjF-XK-bPT"/>
                     <exclude reference="vLI-L3-qRP"/>
                     <exclude reference="wap-lj-SYr"/>
-                    <exclude reference="RTg-yD-HXr"/>
-                    <exclude reference="oj0-KG-0TD"/>
-                    <exclude reference="gMP-S6-uSg"/>
-                    <exclude reference="tPt-bV-bMX"/>
-                    <exclude reference="G1p-xr-avm"/>
-                    <exclude reference="GqF-h3-stN"/>
                     <exclude reference="why-gn-Yrx"/>
                     <exclude reference="x1Y-Lo-shJ"/>
                 </mask>
@@ -191,16 +191,16 @@
                     <include reference="gjL-Fe-InF"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="gMP-S6-uSg"/>
+                    <include reference="tPt-bV-bMX"/>
+                    <include reference="RTg-yD-HXr"/>
+                    <include reference="oj0-KG-0TD"/>
+                    <include reference="G1p-xr-avm"/>
+                    <include reference="GqF-h3-stN"/>
                     <include reference="OUK-Ws-AFy"/>
                     <include reference="fjF-XK-bPT"/>
                     <include reference="vLI-L3-qRP"/>
                     <include reference="wap-lj-SYr"/>
-                    <include reference="RTg-yD-HXr"/>
-                    <include reference="oj0-KG-0TD"/>
-                    <include reference="gMP-S6-uSg"/>
-                    <include reference="tPt-bV-bMX"/>
-                    <include reference="G1p-xr-avm"/>
-                    <include reference="GqF-h3-stN"/>
                     <include reference="why-gn-Yrx"/>
                     <include reference="x1Y-Lo-shJ"/>
                 </mask>

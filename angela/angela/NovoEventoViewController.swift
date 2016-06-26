@@ -21,8 +21,6 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, CNContact
     @IBOutlet weak var inicioTextfield: UITextField!
     @IBOutlet weak var fimTextfield: UITextField!
     @IBOutlet weak var notificacoesTextfield: UITextField!
-    //datepicker
-   
   
     @IBOutlet weak var proximoButton: UIButton!
     
@@ -38,8 +36,6 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, CNContact
         inicioTextfield.delegate = self
         fimTextfield.delegate = self
         notificacoesTextfield.delegate = self
-    
-        
         
         let nomePaddingView = UIView(frame: CGRectMake(0, 0, 15, self.nomeTextfield.frame.height))
         nomeTextfield.leftView = nomePaddingView
@@ -59,13 +55,6 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, CNContact
         let notificacoesPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.fimTextfield.frame.height))
         notificacoesTextfield.leftView = notificacoesPaddingView
         notificacoesTextfield.leftViewMode = UITextFieldViewMode.Always
-
-        
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -74,49 +63,21 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, CNContact
     }
     
     // Teclado sumir com toque
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-
     
-    @IBAction func InicialClicked(sender: AnyObject) {
-        
-        
-    
-    }
-    
-    @IBAction func finalClicked(sender: AnyObject) {
-        
-        
-
-        
-    }
-    
-    
-       
-    
+    // Clique para a proxima tela de adicao de evento
     @IBAction func proximoClicked(sender: AnyObject) {
         
+        // Salva valores
         defaults.setObject(nomeTextfield.text, forKey: "nome")
         defaults.setObject(lugarTextfield.text, forKey: "lugar")
         defaults.setObject(inicioTextfield.text, forKey: "inicio")
         defaults.setObject(fimTextfield.text, forKey: "fim")
         defaults.setObject(notificacoesTextfield.text, forKey: "intervalo")
 
-        let email = defaults.stringForKey("loginEmail")
-        print(email)
-        
         let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
-        
-        let nameSaved = defaults.stringForKey("nome")
-        let lugarSaved = defaults.stringForKey("lugar")
-        
-        print(nameSaved)
-        print(lugarSaved)
-        
     }
-    
-    
 }

@@ -36,27 +36,23 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    // Escolha de contato na lista do telefone
     func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
         
         let phoneNumber = contact.phoneNumbers.first
         let phoneNumberValue = phoneNumber!.value as! CNPhoneNumber
         let number = phoneNumberValue.stringValue
-        
         let email = contact.emailAddresses.first!.value
         let name = contact.givenName;
         let surname = contact.familyName;
         let completeName = name + " " + surname
-//        let contato = Pessoa(pNome: completeName, pEmail: email as! String, pTelefone: number)
-        
+     
         if(statePick == 1)
         {
             numPickAcomp += 1
@@ -89,6 +85,7 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         
     }
     
+    // Mostra lista do telefone
     func displayContacts() {
         let contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self // we want to take a contact after coming back
@@ -96,73 +93,65 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         presentViewController(contactPicker, animated: true, completion: nil)
     }
     
+    // Adiciona acompanhante
     @IBAction func addAcomp(sender: AnyObject) {
         statePick = 1
         displayContacts()
     }
     
+    // Adiciona contato
     @IBAction func addContato(sender: AnyObject) {
         statePick = 2
         displayContacts()
     }
     
-    func scheduleNotification(tinicial: Int, tfinal: Int, intervalo: Int) {
-        let now: NSDateComponents = NSCalendar.currentCalendar().components([.Hour, .Minute], fromDate: NSDate())
-        var hourInicial = tinicial / 100
-        var minuteInicial = tinicial % 100
-        var hourFinal = tfinal / 100
-        var minuteFinal = tfinal % 100
-        
-        hourInicial = hourInicial - now.hour
-        while(hourFinal >= hourInicial || minuteFinal >= minuteInicial)
-        {
-            minuteInicial = minuteInicial + intervalo
-            if(minuteInicial >= 60)
-            {
-                hourInicial += 1
-                minuteInicial = minuteInicial - 60
-            }
-            
-            let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-            let date = cal.dateBySettingHour(hourInicial, minute: minuteInicial, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
-
-            let reminder = UILocalNotification()
-            reminder.fireDate = date
-            reminder.alertBody = "You can now reply with text"
-            reminder.alertAction = "Cool"
-            reminder.soundName = "sound.aif"
-            reminder.category = "CATEGORY_ID"
-            
-            UIApplication.sharedApplication().scheduleLocalNotification(reminder)
-        }
-        
-    }
-    func scheduleNotificationMVP(intervalo : Int)
-    {
-//        var i = 1
+    // ==================================================================
+    // Funcao de agendamento de notificacao 
+    // (nao utilizada para o evento, pois notificacoes demorariam minutos)
+    // ==================================================================
+    
+//    func scheduleNotification(tinicial: Int, tfinal: Int, intervalo: Int) {
 //        let now: NSDateComponents = NSCalendar.currentCalendar().components([.Hour, .Minute], fromDate: NSDate())
+//        var hourInicial = tinicial / 100
+//        var minuteInicial = tinicial % 100
+//        var hourFinal = tfinal / 100
+//        var minuteFinal = tfinal % 100
 //        
-//        for(i = 1; i < 10; i += 1)
+//        hourInicial = hourInicial - now.hour
+//        while(hourFinal >= hourInicial || minuteFinal >= minuteInicial)
 //        {
-//            let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-//            let date = cal.dateBySettingHour(now.hour, minute: now.minute + intervalo * i, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
+//            minuteInicial = minuteInicial + intervalo
+//            if(minuteInicial >= 60)
+//            {
+//                hourInicial += 1
+//                minuteInicial = minuteInicial - 60
+//            }
 //            
-//            print(date)
+//            let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+//            let date = cal.dateBySettingHour(hourInicial, minute: minuteInicial, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
+//
 //            let reminder = UILocalNotification()
 //            reminder.fireDate = date
-//            reminder.alertBody = "Angela says Hi!"
-//            reminder.alertAction = "Angela"
+//            reminder.alertBody = "You can now reply with text"
+//            reminder.alertAction = "Cool"
 //            reminder.soundName = "sound.aif"
 //            reminder.category = "CATEGORY_ID"
 //            
 //            UIApplication.sharedApplication().scheduleLocalNotification(reminder)
 //        }
+//        
+//    }
+    
+    // Funcao de notificacao para o evento (notificacoes feitas em segundos para apresentar)
+    func scheduleNotificationMVP(intervalo : Int)
+    {
         timer = NSTimer.scheduledTimerWithTimeInterval(15, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         timerNotAnswered = NSTimer.scheduledTimerWithTimeInterval(40, target: self, selector: #selector(timerDeuRuim), userInfo: nil, repeats: true)
-    
     }
     
+    
+    // Notificacoes do usuario
     func timerAction(){
         
         var frases = ["Miga sua loooca, cade você?",
@@ -189,6 +178,7 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         
     }
     
+    // Ativacao de perigo
     func timerDeuRuim(){
         
         if(defaults.integerForKey("deuRuim") == 2)
@@ -196,12 +186,13 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
             defaults.setInteger(0, forKey: "deuRuim")
         }
         else{
-            print("deu ruim")
+            print("Perigo!")
             timer.invalidate()
             let userEmail = defaults.stringForKey("loginEmail")
             
+            // Envio de email para contato de emergencia
             if DAO.sendAlert(userEmail!) {
-                print("mandou email")
+                print("Email enviado")
                 timerNotAnswered.invalidate()
             }
             
@@ -209,16 +200,8 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         }
         
     }
-////   viagem da maria 
-//    func checkSenha(){
-//        if defaults.integerForKey("deuRuim") == 0 {
-//            timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
-//        }
-//        else {
-//            timerNotAnswered = NSTimer.scheduledTimerWithTimeInterval(21, target: self, selector: #selector(timerDeuRuim), userInfo: nil, repeats: true)
-//        }
-//    }
     
+    // Criacao de evento no DAO
     @IBAction func criarEvento(sender: AnyObject) {
         
         let tinicial = defaults.integerForKey("inicio")
@@ -232,31 +215,10 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         let userEmail = defaults.stringForKey("loginEmail")
         
         if DAO.createEvent(eventName!, eventAddress: eventAddress!, startTime: 10, endTime: 12, frequency: 15, contacts: "teste@projetotutoras.com", friends: "teste@projetotutoras.com", userEmail: userEmail!) {
-        
             let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
             presentViewController(vc, animated: true, completion: nil)
-            
         }
-            
-         
-        }
-
-
-    
-    
-   //    @IBAction func criarEvento(sender: AnyObject) {
-//        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
-//        presentViewController(vc, animated: true, completion: nil)
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }

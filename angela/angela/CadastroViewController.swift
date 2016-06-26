@@ -59,7 +59,6 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
 }
     
     // Teclado sumir
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -69,8 +68,10 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // Clique para proxima tela
     @IBAction func proximoClicked(sender: AnyObject) {
         
+        // Salva valores
         defaults.setValue(self.nomeTextfield.text, forKey: "cadNome")
         defaults.setValue(self.emailTextfield.text, forKey: "cadEmail")
         defaults.setValue(self.telefoneTextfield.text, forKey: "cadTelefone")
@@ -78,8 +79,6 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
         
         let vc = Cadastro2ViewController(nibName:"Cadastro2ViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
-        
-        
     }
     
     
