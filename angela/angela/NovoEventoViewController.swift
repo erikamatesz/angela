@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Contacts
+import ContactsUI
 
-class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CNContactPickerDelegate {
     
     
     @IBOutlet weak var inicialLabel: UILabel!
@@ -106,10 +108,11 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         }
         
     }
+    
+    
     @IBAction func proximoClicked(sender: AnyObject) {
         let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
-        
         
     }
 }
