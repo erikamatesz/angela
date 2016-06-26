@@ -186,16 +186,16 @@
                     <exclude reference="I2g-KI-oMU"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="3rS-tp-ouk"/>
+                    <exclude reference="M54-A3-FR8"/>
                     <exclude reference="BHA-YZ-pXO"/>
                     <exclude reference="F6y-XO-g8D"/>
-                    <exclude reference="VJ2-Cc-Wdg"/>
-                    <exclude reference="jjJ-W3-uFn"/>
                     <exclude reference="ua6-oj-CaC"/>
                     <exclude reference="zWD-eE-BDB"/>
                     <exclude reference="AwP-tZ-02h"/>
                     <exclude reference="Y40-lt-Ixb"/>
-                    <exclude reference="3rS-tp-ouk"/>
-                    <exclude reference="M54-A3-FR8"/>
+                    <exclude reference="VJ2-Cc-Wdg"/>
+                    <exclude reference="jjJ-W3-uFn"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -210,16 +210,16 @@
                     <include reference="I2g-KI-oMU"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="3rS-tp-ouk"/>
+                    <include reference="M54-A3-FR8"/>
                     <include reference="BHA-YZ-pXO"/>
                     <include reference="F6y-XO-g8D"/>
-                    <include reference="VJ2-Cc-Wdg"/>
-                    <include reference="jjJ-W3-uFn"/>
                     <include reference="ua6-oj-CaC"/>
                     <include reference="zWD-eE-BDB"/>
                     <include reference="AwP-tZ-02h"/>
                     <include reference="Y40-lt-Ixb"/>
-                    <include reference="3rS-tp-ouk"/>
-                    <include reference="M54-A3-FR8"/>
+                    <include reference="VJ2-Cc-Wdg"/>
+                    <include reference="jjJ-W3-uFn"/>
                 </mask>
             </variation>
         </view>
