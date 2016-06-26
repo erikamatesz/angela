@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContatosViewController" customModule="angela" customModuleProvider="target">
@@ -231,20 +231,20 @@
                     <exclude reference="I2g-KI-oMU"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="BHA-YZ-pXO"/>
-                    <exclude reference="F6y-XO-g8D"/>
-                    <exclude reference="6Li-Kb-pfd"/>
-                    <exclude reference="hIx-53-JiD"/>
-                    <exclude reference="VJ2-Cc-Wdg"/>
-                    <exclude reference="jjJ-W3-uFn"/>
-                    <exclude reference="ua6-oj-CaC"/>
-                    <exclude reference="zWD-eE-BDB"/>
-                    <exclude reference="8xi-vS-Jvb"/>
-                    <exclude reference="hCU-nK-Lke"/>
-                    <exclude reference="AwP-tZ-02h"/>
-                    <exclude reference="Y40-lt-Ixb"/>
                     <exclude reference="3rS-tp-ouk"/>
                     <exclude reference="M54-A3-FR8"/>
+                    <exclude reference="BHA-YZ-pXO"/>
+                    <exclude reference="F6y-XO-g8D"/>
+                    <exclude reference="ua6-oj-CaC"/>
+                    <exclude reference="zWD-eE-BDB"/>
+                    <exclude reference="AwP-tZ-02h"/>
+                    <exclude reference="Y40-lt-Ixb"/>
+                    <exclude reference="VJ2-Cc-Wdg"/>
+                    <exclude reference="jjJ-W3-uFn"/>
+                    <exclude reference="6Li-Kb-pfd"/>
+                    <exclude reference="hIx-53-JiD"/>
+                    <exclude reference="8xi-vS-Jvb"/>
+                    <exclude reference="hCU-nK-Lke"/>
                     <exclude reference="KcH-jM-PRC"/>
                     <exclude reference="k7j-k9-qMZ"/>
                 </mask>
@@ -261,20 +261,20 @@
                     <include reference="I2g-KI-oMU"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="BHA-YZ-pXO"/>
-                    <include reference="F6y-XO-g8D"/>
-                    <include reference="6Li-Kb-pfd"/>
-                    <include reference="hIx-53-JiD"/>
-                    <include reference="VJ2-Cc-Wdg"/>
-                    <include reference="jjJ-W3-uFn"/>
-                    <include reference="ua6-oj-CaC"/>
-                    <include reference="zWD-eE-BDB"/>
-                    <include reference="8xi-vS-Jvb"/>
-                    <include reference="hCU-nK-Lke"/>
-                    <include reference="AwP-tZ-02h"/>
-                    <include reference="Y40-lt-Ixb"/>
                     <include reference="3rS-tp-ouk"/>
                     <include reference="M54-A3-FR8"/>
+                    <include reference="BHA-YZ-pXO"/>
+                    <include reference="F6y-XO-g8D"/>
+                    <include reference="ua6-oj-CaC"/>
+                    <include reference="zWD-eE-BDB"/>
+                    <include reference="AwP-tZ-02h"/>
+                    <include reference="Y40-lt-Ixb"/>
+                    <include reference="VJ2-Cc-Wdg"/>
+                    <include reference="jjJ-W3-uFn"/>
+                    <include reference="6Li-Kb-pfd"/>
+                    <include reference="hIx-53-JiD"/>
+                    <include reference="8xi-vS-Jvb"/>
+                    <include reference="hCU-nK-Lke"/>
                     <include reference="KcH-jM-PRC"/>
                     <include reference="k7j-k9-qMZ"/>
                 </mask>

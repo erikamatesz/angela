@@ -10,6 +10,7 @@ import UIKit
 
 class CadastroViewController: UIViewController, UITextFieldDelegate {
     
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     
     //Textfields
@@ -69,6 +70,11 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func proximoClicked(sender: AnyObject) {
+        
+        defaults.setValue(self.nomeTextfield.text, forKey: "cadNome")
+        defaults.setValue(self.emailTextfield.text, forKey: "cadEmail")
+        defaults.setValue(self.telefoneTextfield.text, forKey: "cadTelefone")
+        defaults.setValue(self.senhaTextfield.text, forKey: "cadSenha")
         
         let vc = Cadastro2ViewController(nibName:"Cadastro2ViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)

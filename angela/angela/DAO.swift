@@ -3,7 +3,7 @@
 //  AngelaDAO
 //
 //  Created by Erika Bueno on 25/06/16.
-//  Copyright Â© 2016 Erika Bueno. All rights reserved.
+//  Copyright :copyright: 2016 Erika Bueno. All rights reserved.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import UIKit
 
 class DAO: NSObject {
     
-    /* Verifica se estÃ¡ conectado Ã  internet. */
+    /* Verifica se está conectado à internet. */
     
     class func isConnected() -> Bool {
         
@@ -57,79 +57,68 @@ class DAO: NSObject {
     
     
     /*
+     
+     Cria o usuário no banco com os seguintes dados (estou usando a nomenclatura igual à que eu usei no banco):
+     
+     - Nome --> name
+     - Email --> email
+     - Senha --> password
+     - Senha de emergência --> emergpass
+     - Celular --> mobile
+     
+     */
     
-    Cria o usuÃ¡rio no banco com os seguintes dados (estou usando a nomenclatura igual Ã  que eu usei no banco):
-    
-    - Nome --> name
-    - Email --> email
-    - Senha --> password
-    - Senha de emergÃªncia --> emergpass
-    - Celular --> mobile
-    
-    */
     
     class func createUser (name: String, email: String, password: String, emergpass: String, mobile: String) -> Bool {
         
         print("DAO.createUser is trying to register you!")
         
-        var created = false
+        let urlString = "http://www.projetotutoras.com/angelapp/register.php"
         
-        let myUrl = NSURL(string: "http://www.projetotutoras.com/angelapp/register.php")
+        let parameters = NSString(format: "name=\(name)&email=\(email)&password=\(password)&emergpass=\(emergpass)&mobile=\(mobile)", name, email, password, emergpass, mobile)
         
-        let request = NSMutableURLRequest(URL:myUrl!)
+        let paramData: NSData = parameters.dataUsingEncoding(NSUTF8StringEncoding)!
+        
+        let url = NSURL(string:urlString)
+        
+        let request = NSMutableURLRequest(URL: url!)
+        
+        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
         request.HTTPMethod = "POST"
         
-        let myData:NSString = "name=\(name)&email=\(email)&password=\(password)&emergpass=\(emergpass)&mobile=\(mobile)"
+        request.HTTPBody = paramData
         
-        request.HTTPBody = myData.dataUsingEncoding(NSUTF8StringEncoding);
+        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
         
-        let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            
-            myData, response, error in
-            
-            if error != nil { return; }
-            
-            let responseString = NSString(data: myData!, encoding: NSUTF8StringEncoding)
-            
-            print(responseString)
-            
-            if responseString == "created" {
-                
-                created = true
-                
-            } else {
-                
-                created = false
-            }
-            
-        }
+        let result: NSData = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)
         
-        dataTask.resume()
+        let returnString = String(data: result, encoding: NSUTF8StringEncoding)
         
-        if created == true {
-            
+        let finalResponse = String(returnString!.characters.suffix(7)) // created
+        
+        print(finalResponse)
+        
+        if finalResponse == "created" {
+            print("Criou o usuário")
             return true
-            
         } else {
-            
+            print("Não criou o usuário")
             return false
-            
         }
+        
     }
     
     
     /*
-    
-    Loga o usuÃ¡rio.
-    
-    */
+     
+     Loga o usuário.
+     
+     */
     
     class func userLogin (email: String, password: String) -> Bool  {
         
         print("DAO.userLogin will try to log you in...")
-        
-        var created = false
         
         let urlString = "http://www.projetotutoras.com/angelapp/login.php"
         
@@ -147,37 +136,22 @@ class DAO: NSObject {
         
         request.HTTPBody = paramData
         
-        let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            
-            myData, response, error in
-            
-            if error != nil { return; }
-            
-            let responseString = NSString(data: myData!, encoding: NSUTF8StringEncoding)
-            
-            print(responseString)
-            
-            if responseString == "logged" {
-                
-                created = true
-                
-            } else {
-                
-                created = false
-            }
-            
-        }
+        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
         
-        dataTask.resume()
+        let result: NSData = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)
         
-        if created == true {
-            
+        let returnString = String(data: result, encoding: NSUTF8StringEncoding)
+        
+        let finalResponse = String(returnString!.characters.suffix(6)) // created
+        
+        print(finalResponse)
+        
+        if finalResponse == "logged" {
+            print("Logou")
             return true
-            
         } else {
-            
+            print("Não logou")
             return false
-            
         }
         
     }
@@ -185,71 +159,106 @@ class DAO: NSObject {
     
     
     /*
-    
-    Cria o evento com os seguintes dados:
-    
-    - Nome do evento --> eventName
-    - EndereÃ§o do evento --> eventAddress
-    - Tempo inicial --> startTime
-    - Tempo final --> endTime
-    - FrequÃªncia --> frequency
-    - Contatos --> contacts
-    - Amigos --> friends
-    - E-mail --> userEmail
-    
-    */
+     
+     Cria o evento com os seguintes dados:
+     
+     - Nome do evento --> eventName
+     - Endereço do evento --> eventAddress
+     - Tempo inicial --> startTime
+     - Tempo final --> endTime
+     - Frequência --> frequency
+     - Contatos --> contacts
+     - Amigos --> friends
+     - E-mail --> userEmail
+     
+     */
     
     
     class func createEvent (eventName: String, eventAddress: String, startTime: Int, endTime: Int, frequency: Int, contacts: String, friends: String, userEmail: String) -> Bool {
         
         print("DAO.createUser is trying to create this event...")
         
-        var created = false
+        let urlString = "http://www.projetotutoras.com/angelapp/createevent.php"
         
-        let myUrl = NSURL(string: "http://www.projetotutoras.com/angelapp/createevent.php")
+        let parameters = NSString(format: "eventName=\(eventName)&eventAddress=\(eventAddress)&startTime=\(startTime)&endTime=\(endTime)&frequency=\(frequency)&contacts=\(contacts)&friends=\(friends)&userEmail=\(userEmail)", eventName, eventAddress, startTime, endTime, frequency, contacts, friends, userEmail)
         
-        let request = NSMutableURLRequest(URL:myUrl!)
+        let paramData: NSData = parameters.dataUsingEncoding(NSUTF8StringEncoding)!
+        
+        let url = NSURL(string:urlString)
+        
+        let request = NSMutableURLRequest(URL: url!)
+        
+        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
         request.HTTPMethod = "POST"
         
-        let myData:NSString = "eventName=\(eventName)&eventAddress=\(eventAddress)&startTime=\(startTime)&endTime=\(endTime)&frequency=\(frequency)&contacts=\(contacts)&friends=\(friends)&userEmail\(userEmail)"
+        request.HTTPBody = paramData
         
-        request.HTTPBody = myData.dataUsingEncoding(NSUTF8StringEncoding);
+        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
         
-        let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            
-            myData, response, error in
-            
-            if error != nil { return; }
-            
-            let responseString = NSString(data: myData!, encoding: NSUTF8StringEncoding)
-            
-            print(responseString)
-            
-            if responseString == "eventcreated" {
-                
-                created = true
-                
-            } else {
-                
-                created = false
-            }
-            
-        }
+        let result: NSData = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)
         
-        dataTask.resume()
+        let returnString = String(data: result, encoding: NSUTF8StringEncoding)
         
-        if created == true {
-            
+        let finalResponse = String(returnString!.characters.suffix(12)) // created
+        
+        print(finalResponse)
+        
+        if finalResponse == "eventcreated" {
+            print("Criou evento")
             return true
-            
         } else {
-            
+            print("Não criou")
             return false
-            
         }
+        
     }
     
     
+    /*
+     
+     Envia alerta
+     
+     Caso o usuário (identificado por userEmail) não digite a senha, envia um email de alerta para o contato de emergência.
+     
+     */
+    
+    class func sendAlert (userEmail: String) -> Bool {
+        
+        print("DAO.sendAlert is sending alerts...")
+        
+        let urlString = "http://www.projetotutoras.com/angelapp/emailalert.php"
+        
+        let parameters = NSString(format: "userEmail=\(userEmail)", userEmail)
+        let paramData: NSData = parameters.dataUsingEncoding(NSUTF8StringEncoding)!
+        
+        let url = NSURL(string:urlString)
+        
+        let request = NSMutableURLRequest(URL: url!)
+        
+        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        
+        request.HTTPMethod = "POST"
+        
+        request.HTTPBody = paramData
+        
+        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
+        
+        let result: NSData = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)
+        
+        let returnString = String(data: result, encoding: NSUTF8StringEncoding)
+        
+        let finalResponse = String(returnString!.characters.suffix(4)) // created
+        
+        print(finalResponse)
+        
+        if finalResponse == "sent" {
+            print("Mandou")
+            return true
+        } else {
+            print("Não mandou")
+            return false
+        }
+    }
     
 }

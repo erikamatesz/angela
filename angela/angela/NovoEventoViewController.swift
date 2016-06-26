@@ -13,8 +13,6 @@ import ContactsUI
 class NovoEventoViewController: UIViewController, UITextFieldDelegate, CNContactPickerDelegate {
     
     var InicialSalva: String!
-
-    
     
     //textfield
     @IBOutlet weak var nomeTextfield: UITextField!
@@ -100,11 +98,17 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, CNContact
     
     @IBAction func proximoClicked(sender: AnyObject) {
         
-        let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
-        presentViewController(vc, animated: true, completion: nil)
-        
         defaults.setObject(nomeTextfield.text, forKey: "nome")
         defaults.setObject(lugarTextfield.text, forKey: "lugar")
+        defaults.setObject(inicioTextfield.text, forKey: "inicio")
+        defaults.setObject(fimTextfield.text, forKey: "fim")
+        defaults.setObject(notificacoesTextfield.text, forKey: "intervalo")
+
+        let email = defaults.stringForKey("loginEmail")
+        print(email)
+        
+        let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
+        presentViewController(vc, animated: true, completion: nil)
         
         let nameSaved = defaults.stringForKey("nome")
         let lugarSaved = defaults.stringForKey("lugar")

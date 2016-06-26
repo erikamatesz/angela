@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventoViewController" customModule="angela" customModuleProvider="target">
@@ -215,26 +215,26 @@
                     <exclude reference="aE5-zW-g2S"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="32s-fY-2Xf"/>
-                    <exclude reference="rvJ-pf-IlE"/>
-                    <exclude reference="I0N-p4-1D3"/>
-                    <exclude reference="lL2-Vb-p8u"/>
-                    <exclude reference="Lnc-Vg-UrV"/>
-                    <exclude reference="an5-gB-4Az"/>
-                    <exclude reference="1r9-6n-ZfA"/>
-                    <exclude reference="Cey-cq-Gtl"/>
-                    <exclude reference="Ldg-86-TLb"/>
-                    <exclude reference="NR1-1j-EOO"/>
-                    <exclude reference="XF8-3b-e1n"/>
+                    <exclude reference="2mb-pz-hLX"/>
+                    <exclude reference="OSk-Cu-g7M"/>
                     <exclude reference="3C8-yZ-GPt"/>
                     <exclude reference="51g-Ds-8bX"/>
                     <exclude reference="L2H-ed-rRm"/>
                     <exclude reference="MEo-k3-lMF"/>
                     <exclude reference="SCZ-WR-WbP"/>
-                    <exclude reference="2mb-pz-hLX"/>
-                    <exclude reference="OSk-Cu-g7M"/>
+                    <exclude reference="I0N-p4-1D3"/>
+                    <exclude reference="lL2-Vb-p8u"/>
+                    <exclude reference="Lnc-Vg-UrV"/>
+                    <exclude reference="an5-gB-4Az"/>
                     <exclude reference="JZz-CY-H4R"/>
                     <exclude reference="jKH-iX-eo4"/>
+                    <exclude reference="32s-fY-2Xf"/>
+                    <exclude reference="rvJ-pf-IlE"/>
+                    <exclude reference="1r9-6n-ZfA"/>
+                    <exclude reference="Cey-cq-Gtl"/>
+                    <exclude reference="Ldg-86-TLb"/>
+                    <exclude reference="NR1-1j-EOO"/>
+                    <exclude reference="XF8-3b-e1n"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -249,26 +249,26 @@
                     <include reference="aE5-zW-g2S"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="32s-fY-2Xf"/>
-                    <include reference="rvJ-pf-IlE"/>
-                    <include reference="I0N-p4-1D3"/>
-                    <include reference="lL2-Vb-p8u"/>
-                    <include reference="Lnc-Vg-UrV"/>
-                    <include reference="an5-gB-4Az"/>
-                    <include reference="1r9-6n-ZfA"/>
-                    <include reference="Cey-cq-Gtl"/>
-                    <include reference="Ldg-86-TLb"/>
-                    <include reference="NR1-1j-EOO"/>
-                    <include reference="XF8-3b-e1n"/>
+                    <include reference="2mb-pz-hLX"/>
+                    <include reference="OSk-Cu-g7M"/>
                     <include reference="3C8-yZ-GPt"/>
                     <include reference="51g-Ds-8bX"/>
                     <include reference="L2H-ed-rRm"/>
                     <include reference="MEo-k3-lMF"/>
                     <include reference="SCZ-WR-WbP"/>
-                    <include reference="2mb-pz-hLX"/>
-                    <include reference="OSk-Cu-g7M"/>
+                    <include reference="I0N-p4-1D3"/>
+                    <include reference="lL2-Vb-p8u"/>
+                    <include reference="Lnc-Vg-UrV"/>
+                    <include reference="an5-gB-4Az"/>
                     <include reference="JZz-CY-H4R"/>
                     <include reference="jKH-iX-eo4"/>
+                    <include reference="32s-fY-2Xf"/>
+                    <include reference="rvJ-pf-IlE"/>
+                    <include reference="1r9-6n-ZfA"/>
+                    <include reference="Cey-cq-Gtl"/>
+                    <include reference="Ldg-86-TLb"/>
+                    <include reference="NR1-1j-EOO"/>
+                    <include reference="XF8-3b-e1n"/>
                 </mask>
             </variation>
         </view>

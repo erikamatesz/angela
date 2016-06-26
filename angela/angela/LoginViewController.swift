@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate{
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var imagemBackground: UIImageView!
     
@@ -20,6 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var criarButton: UIButton!
     @IBOutlet weak var esqueciSenhaButton: UIButton!
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,6 +36,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     let senhaPaddingView = UIView(frame: CGRectMake(0, 0, 15, self.senhaTextfield.frame.height))
     senhaTextfield.leftView = senhaPaddingView
     senhaTextfield.leftViewMode = UITextFieldViewMode.Always
+        
+    defaults.setObject(1234, forKey: "senha")
+
     
     // Do any additional setup after loading the view, typically from a nib.
     }
@@ -53,26 +58,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func loginClicked(sender: AnyObject) {
         
-//        if DAO.isConnected() {
-//            
-////            if DAO.userLogin(<#T##email: String##String#>, password: <#T##String#>) { // exibe o vc 
-//            
-//                
-//                
-//            } else {
-//                // erro no login mostra alerta 
-//            
-//            }
-//            
-//        } else {
-//        
-//            // exibir alerta informando que não tem conexão
-//        
-//        }
+        if DAO.isConnected() {
+            
+            defaults.setObject(self.emailTextfield.text, forKey: "loginEmail")
+            
+            if DAO.userLogin(self.emailTextfield.text!, password: self.senhaTextfield.text!) {
+                
+                let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
+                presentViewController(vc, animated: true, completion: nil)
+            
+            } else {
+            
+                print("deu ruim no login")
+            
+            }
+            
+        } else {
         
+            print("deu ruim na internet")
         
-        let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
-           presentViewController(vc, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func criarClicked(sender: AnyObject) {

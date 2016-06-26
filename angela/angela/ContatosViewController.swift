@@ -24,10 +24,15 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
     
     @IBOutlet weak var criarEventoButton: UIButton!
     
+    var timer:NSTimer!
+    var timerNotAnswered:NSTimer!
     
     var statePick = 0
     var numPickAcomp = 0
     var numPickContato = 0
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,11 +106,137 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         displayContacts()
     }
     
+    func scheduleNotification(tinicial: Int, tfinal: Int, intervalo: Int) {
+        let now: NSDateComponents = NSCalendar.currentCalendar().components([.Hour, .Minute], fromDate: NSDate())
+        var hourInicial = tinicial / 100
+        var minuteInicial = tinicial % 100
+        var hourFinal = tfinal / 100
+        var minuteFinal = tfinal % 100
+        
+        hourInicial = hourInicial - now.hour
+        while(hourFinal >= hourInicial || minuteFinal >= minuteInicial)
+        {
+            minuteInicial = minuteInicial + intervalo
+            if(minuteInicial >= 60)
+            {
+                hourInicial += 1
+                minuteInicial = minuteInicial - 60
+            }
+            
+            let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            let date = cal.dateBySettingHour(hourInicial, minute: minuteInicial, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
+
+            let reminder = UILocalNotification()
+            reminder.fireDate = date
+            reminder.alertBody = "You can now reply with text"
+            reminder.alertAction = "Cool"
+            reminder.soundName = "sound.aif"
+            reminder.category = "CATEGORY_ID"
+            
+            UIApplication.sharedApplication().scheduleLocalNotification(reminder)
+        }
+        
+    }
+    func scheduleNotificationMVP(intervalo : Int)
+    {
+//        var i = 1
+//        let now: NSDateComponents = NSCalendar.currentCalendar().components([.Hour, .Minute], fromDate: NSDate())
+//        
+//        for(i = 1; i < 10; i += 1)
+//        {
+//            let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+//            let date = cal.dateBySettingHour(now.hour, minute: now.minute + intervalo * i, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
+//            
+//            print(date)
+//            let reminder = UILocalNotification()
+//            reminder.fireDate = date
+//            reminder.alertBody = "Angela says Hi!"
+//            reminder.alertAction = "Angela"
+//            reminder.soundName = "sound.aif"
+//            reminder.category = "CATEGORY_ID"
+//            
+//            UIApplication.sharedApplication().scheduleLocalNotification(reminder)
+//        }
+        timer = NSTimer.scheduledTimerWithTimeInterval(15, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        
+        timerNotAnswered = NSTimer.scheduledTimerWithTimeInterval(40, target: self, selector: #selector(timerDeuRuim), userInfo: nil, repeats: true)
+    
+    }
+    
+    func timerAction(){
+        
+        var frases = ["Miga sua loooca, cade você?",
+                      "Migaaa sua looca, ta de zoa né?",
+                      "Oi amiga! Me responde?",
+                      "Oiii",
+                      "Pode falar?",
+                      "UP UP UP",
+                      "Saudades :)",
+                      "Migaa responde plzz",
+                      "Fala comigo!",
+                      "HORA DA FOFOCAAA",
+                      "Você não sabe da maior",
+                      "Preciso de ajuda!!!"]
+        var numRand = Int(arc4random_uniform(12))
+        
+        let reminder = UILocalNotification()
+        reminder.alertBody = "Angela disse: " + frases[numRand]
+        reminder.alertAction = "Angela"
+        reminder.soundName = "sound.aif"
+        reminder.category = "CATEGORY_ID"
+
+        UIApplication.sharedApplication().scheduleLocalNotification(reminder)
+        
+    }
+    
+    func timerDeuRuim(){
+        
+        if(defaults.integerForKey("deuRuim") == 2)
+        {
+            defaults.setInteger(0, forKey: "deuRuim")
+        }
+        else{
+            print("deu ruim")
+            timer.invalidate()
+            let userEmail = defaults.stringForKey("loginEmail")
+            
+            if DAO.sendAlert(userEmail!) {
+                print("mandou email")
+                timerNotAnswered.invalidate()
+            }
+            
+            defaults.setInteger(0, forKey: "deuRuim")
+        }
+        
+    }
+////   viagem da maria 
+//    func checkSenha(){
+//        if defaults.integerForKey("deuRuim") == 0 {
+//            timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
+//        }
+//        else {
+//            timerNotAnswered = NSTimer.scheduledTimerWithTimeInterval(21, target: self, selector: #selector(timerDeuRuim), userInfo: nil, repeats: true)
+//        }
+//    }
+    
     @IBAction func criarEvento(sender: AnyObject) {
         
+        let tinicial = defaults.integerForKey("inicio")
+        let tfinal = defaults.integerForKey("fim")
+        let intervalo = defaults.integerForKey("intervalo")
+
+        scheduleNotificationMVP(intervalo)
+        
+        let eventName = defaults.stringForKey("nome")
+        let eventAddress = defaults.stringForKey("lugar")
+        let userEmail = defaults.stringForKey("loginEmail")
+        
+        if DAO.createEvent(eventName!, eventAddress: eventAddress!, startTime: 10, endTime: 12, frequency: 15, contacts: "teste@projetotutoras.com", friends: "teste@projetotutoras.com", userEmail: userEmail!) {
+        
+            let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
+            presentViewController(vc, animated: true, completion: nil)
             
-                    let vc = EventoViewController(nibName:"EventoViewController", bundle: nil)
-                            presentViewController(vc, animated: true, completion: nil)
+        }
             
          
         }

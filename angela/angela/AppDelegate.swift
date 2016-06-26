@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -50,8 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let categories = NSSet(object: category) as! Set<UIUserNotificationCategory>
         let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-        
-        
+        application.beginBackgroundTaskWithName("showNotification", expirationHandler: nil)
+
         return true
         
     }
@@ -86,7 +86,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
     }
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        var pass : NSString
+        let reply = responseInfo[UIUserNotificationActionResponseTypedTextKey]
+        pass = reply as! NSString
+//        defaults.setInteger(2, forKey: "deuRuim")
+        
+        if (pass != defaults.stringForKey("senha")){
+            print("fudeu")
+            defaults.setInteger(1, forKey: "deuRuim")
+            
+        }
+        else{
+            defaults.setInteger(2, forKey: "deuRuim")
+        }
+    }
+
     
     
 }

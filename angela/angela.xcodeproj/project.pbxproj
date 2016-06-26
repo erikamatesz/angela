@@ -194,8 +194,8 @@
 				86E0666F1D1F3994002203F6 /* Cadastro2ViewController.xib */,
 				094F93C51D1F318F005C46A4 /* EventoViewController.xib */,
 				094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */,
-				86E066731D1F444A002203F6 /* ContatosViewController.xib */,
 				094F936D1D1ED594005C46A4 /* Main.storyboard */,
+				86E066731D1F444A002203F6 /* ContatosViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
