@@ -11,15 +11,30 @@ import UIKit
 class EventoViewController: UIViewController{
     
     @IBOutlet weak var criarButton: UIButton!
-    var toPass: String!
     @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var lugar: UILabel!
+    
+    @IBOutlet weak var iconeImage: UIImageView!
+    @IBOutlet weak var fraseLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nome.text = toPass
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let nameSaved = defaults.stringForKey("nome")
+        let lugarSaved = defaults.stringForKey("lugar")
         
-        
+        if nameSaved == nil || lugarSaved == nil{
+            nome.hidden = true
+            lugar.hidden = true
+        }
+            
+        else {
+            nome.text = nameSaved
+            lugar.text = lugarSaved
+            iconeImage.hidden = true
+            fraseLabel.hidden = true
+        }
     }
     
   

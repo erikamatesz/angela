@@ -8,6 +8,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventoViewController" customModule="angela" customModuleProvider="target">
             <connections>
                 <outlet property="criarButton" destination="tt1-m3-2dI" id="oby-2I-1BH"/>
+                <outlet property="fraseLabel" destination="03a-pB-Qcd" id="Ao7-8g-VjW"/>
+                <outlet property="iconeImage" destination="e06-om-jPK" id="mmp-wg-lHN"/>
+                <outlet property="lugar" destination="aE5-zW-g2S" id="Uui-ZT-3zy"/>
                 <outlet property="nome" destination="WLy-e7-3cH" id="TxY-kJ-ZBO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -49,7 +52,7 @@
                         <rect key="frame" x="29" y="84" width="183" height="21"/>
                     </variation>
                 </label>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lugar " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-zW-g2S">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lugar " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-zW-g2S">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,20 +152,20 @@
                     <exclude reference="e06-om-jPK"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="2mb-pz-hLX"/>
+                    <exclude reference="OSk-Cu-g7M"/>
+                    <exclude reference="3C8-yZ-GPt"/>
+                    <exclude reference="L2H-ed-rRm"/>
+                    <exclude reference="MEo-k3-lMF"/>
+                    <exclude reference="SCZ-WR-WbP"/>
+                    <exclude reference="JZz-CY-H4R"/>
+                    <exclude reference="jKH-iX-eo4"/>
                     <exclude reference="1r9-6n-ZfA"/>
                     <exclude reference="4nd-fp-VfC"/>
                     <exclude reference="Cey-cq-Gtl"/>
                     <exclude reference="Ldg-86-TLb"/>
                     <exclude reference="NR1-1j-EOO"/>
                     <exclude reference="XF8-3b-e1n"/>
-                    <exclude reference="3C8-yZ-GPt"/>
-                    <exclude reference="L2H-ed-rRm"/>
-                    <exclude reference="MEo-k3-lMF"/>
-                    <exclude reference="SCZ-WR-WbP"/>
-                    <exclude reference="2mb-pz-hLX"/>
-                    <exclude reference="OSk-Cu-g7M"/>
-                    <exclude reference="JZz-CY-H4R"/>
-                    <exclude reference="jKH-iX-eo4"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -175,20 +178,20 @@
                     <include reference="e06-om-jPK"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="2mb-pz-hLX"/>
+                    <include reference="OSk-Cu-g7M"/>
+                    <include reference="3C8-yZ-GPt"/>
+                    <include reference="L2H-ed-rRm"/>
+                    <include reference="MEo-k3-lMF"/>
+                    <include reference="SCZ-WR-WbP"/>
+                    <include reference="JZz-CY-H4R"/>
+                    <include reference="jKH-iX-eo4"/>
                     <include reference="1r9-6n-ZfA"/>
                     <include reference="4nd-fp-VfC"/>
                     <include reference="Cey-cq-Gtl"/>
                     <include reference="Ldg-86-TLb"/>
                     <include reference="NR1-1j-EOO"/>
                     <include reference="XF8-3b-e1n"/>
-                    <include reference="3C8-yZ-GPt"/>
-                    <include reference="L2H-ed-rRm"/>
-                    <include reference="MEo-k3-lMF"/>
-                    <include reference="SCZ-WR-WbP"/>
-                    <include reference="2mb-pz-hLX"/>
-                    <include reference="OSk-Cu-g7M"/>
-                    <include reference="JZz-CY-H4R"/>
-                    <include reference="jKH-iX-eo4"/>
                 </mask>
             </variation>
         </view>

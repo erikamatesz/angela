@@ -33,6 +33,8 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
     
     var contacts = ["joao", "maria"];
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +54,23 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         lugarTextfield.leftViewMode = UITextFieldViewMode.Always
         
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setValue(<#T##value: AnyObject?##AnyObject?#>, forKey: <#T##String#>)
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Teclado sumir com toque
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
     
     @IBAction func InicialClicked(sender: AnyObject) {
         
@@ -137,6 +151,15 @@ class NovoEventoViewController: UIViewController, UITextFieldDelegate, UICollect
         
         let vc = ContatosViewController(nibName:"ContatosViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)
+        
+        defaults.setObject(nomeTextfield.text, forKey: "nome")
+        defaults.setObject(lugarTextfield.text, forKey: "lugar")
+        
+        let nameSaved = defaults.stringForKey("nome")
+        let lugarSaved = defaults.stringForKey("lugar")
+        
+        print(nameSaved)
+        print(lugarSaved)
         
     }
     
