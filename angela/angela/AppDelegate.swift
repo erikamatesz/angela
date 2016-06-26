@@ -21,8 +21,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
+        
+        
+        //Habilitando notificações
+        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+        application.registerUserNotificationSettings(pushNotificationSettings)
+        application.registerForRemoteNotifications()
+
         return true
         
+    }
+    
+    //Função para se certificar que o device pode receber push
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print("DEVICE TOKEN = \(deviceToken)")
+    }
+    
+    //Função para mostrar que o device não pode ser registrado
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print(error)
     }
 
     func applicationWillResignActive(application: UIApplication) {
