@@ -50,7 +50,7 @@ class ContatosViewController: UIViewController, CNContactPickerDelegate {
         let name = contact.givenName;
         let surname = contact.familyName;
         let completeName = name + " " + surname
-        let contato = Pessoa(pNome: completeName, pEmail: email as! String, pTelefone: number)
+//        let contato = Pessoa(pNome: completeName, pEmail: email as! String, pTelefone: number)
         
         if(statePick == 1)
         {
