@@ -16,6 +16,9 @@ class EventoViewController: UIViewController{
     
     @IBOutlet weak var iconeImage: UIImageView!
     @IBOutlet weak var fraseLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,4 +51,9 @@ class EventoViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logoutAction(sender: AnyObject) {
+        defaults.setObject("0", forKey: "loggedIn")
+        let vc = LoginViewController(nibName:"LoginViewController", bundle: nil)
+        presentViewController(vc, animated: true, completion: nil)
+    }
 }

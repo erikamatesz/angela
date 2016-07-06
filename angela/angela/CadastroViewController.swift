@@ -75,7 +75,7 @@ class CadastroViewController: UIViewController, UITextFieldDelegate {
         defaults.setValue(self.nomeTextfield.text, forKey: "cadNome")
         defaults.setValue(self.emailTextfield.text, forKey: "cadEmail")
         defaults.setValue(self.telefoneTextfield.text, forKey: "cadTelefone")
-        defaults.setValue(self.senhaTextfield.text, forKey: "cadSenha")
+        defaults.setValue(self.senhaTextfield.text, forKey: "password")
         
         let vc = Cadastro2ViewController(nibName:"Cadastro2ViewController", bundle: nil)
         presentViewController(vc, animated: true, completion: nil)

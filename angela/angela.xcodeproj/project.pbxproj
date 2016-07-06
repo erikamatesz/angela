@@ -27,6 +27,8 @@
 		094F93C71D1F318F005C46A4 /* EventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094F93C51D1F318F005C46A4 /* EventoViewController.xib */; };
 		094F93CA1D1F31C9005C46A4 /* NovoEventoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094F93C81D1F31C9005C46A4 /* NovoEventoViewController.swift */; };
 		094F93CB1D1F31C9005C46A4 /* NovoEventoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */; };
+		098E28081D2D3109005119A2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E28061D2D3109005119A2 /* PasswordViewController.swift */; };
+		098E28091D2D3109005119A2 /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098E28071D2D3109005119A2 /* PasswordViewController.xib */; };
 		86E066701D1F3994002203F6 /* Cadastro2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E0666E1D1F3994002203F6 /* Cadastro2ViewController.swift */; };
 		86E066711D1F3994002203F6 /* Cadastro2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E0666F1D1F3994002203F6 /* Cadastro2ViewController.xib */; };
 		86E066741D1F444A002203F6 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E066721D1F444A002203F6 /* ContatosViewController.swift */; };
@@ -78,6 +80,8 @@
 		094F93C51D1F318F005C46A4 /* EventoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventoViewController.xib; sourceTree = "<group>"; };
 		094F93C81D1F31C9005C46A4 /* NovoEventoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoEventoViewController.swift; sourceTree = "<group>"; };
 		094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NovoEventoViewController.xib; sourceTree = "<group>"; };
+		098E28061D2D3109005119A2 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		098E28071D2D3109005119A2 /* PasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
 		86E0666E1D1F3994002203F6 /* Cadastro2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cadastro2ViewController.swift; sourceTree = "<group>"; };
 		86E0666F1D1F3994002203F6 /* Cadastro2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cadastro2ViewController.xib; sourceTree = "<group>"; };
 		86E066721D1F444A002203F6 /* ContatosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				094F93BC1D1F3098005C46A4 /* CadastroViewController.swift */,
 				86E0666E1D1F3994002203F6 /* Cadastro2ViewController.swift */,
 				094F93C41D1F318F005C46A4 /* EventoViewController.swift */,
+				098E28061D2D3109005119A2 /* PasswordViewController.swift */,
 				094F93C81D1F31C9005C46A4 /* NovoEventoViewController.swift */,
 				86E066721D1F444A002203F6 /* ContatosViewController.swift */,
 				094F936B1D1ED594005C46A4 /* MainViewController.swift */,
@@ -199,6 +204,7 @@
 				094F93C91D1F31C9005C46A4 /* NovoEventoViewController.xib */,
 				094F936D1D1ED594005C46A4 /* Main.storyboard */,
 				86E066731D1F444A002203F6 /* ContatosViewController.xib */,
+				098E28071D2D3109005119A2 /* PasswordViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				094F93711D1ED594005C46A4 /* Assets.xcassets in Resources */,
 				094F93C71D1F318F005C46A4 /* EventoViewController.xib in Resources */,
 				094F936F1D1ED594005C46A4 /* Main.storyboard in Resources */,
+				098E28091D2D3109005119A2 /* PasswordViewController.xib in Resources */,
 				86E066711D1F3994002203F6 /* Cadastro2ViewController.xib in Resources */,
 				86E066751D1F444A002203F6 /* ContatosViewController.xib in Resources */,
 				094F93BF1D1F3098005C46A4 /* CadastroViewController.xib in Resources */,
@@ -358,6 +365,7 @@
 				86E066701D1F3994002203F6 /* Cadastro2ViewController.swift in Sources */,
 				094F93AB1D1EDBAE005C46A4 /* Pessoa.swift in Sources */,
 				094F936C1D1ED594005C46A4 /* MainViewController.swift in Sources */,
+				098E28081D2D3109005119A2 /* PasswordViewController.swift in Sources */,
 				094F93CA1D1F31C9005C46A4 /* NovoEventoViewController.swift in Sources */,
 				094F93BE1D1F3098005C46A4 /* CadastroViewController.swift in Sources */,
 				86E066741D1F444A002203F6 /* ContatosViewController.swift in Sources */,

@@ -17,9 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let mainViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let logged = defaults.stringForKey("loggedIn")
+        let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let passwordViewController = PasswordViewController(nibName: "PasswordViewController", bundle: nil)
         
-        window?.rootViewController = mainViewController
+        if(logged == "1"){
+            window?.rootViewController = passwordViewController
+        }
+        else
+        {
+            window?.rootViewController = loginViewController
+        }
+        
         window?.makeKeyAndVisible()
         
         //Habilitando notificações
@@ -51,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         application.beginBackgroundTaskWithName("showNotification", expirationHandler: nil)
-
+        
         return true
         
     }
@@ -74,6 +83,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let logged = defaults.stringForKey("loggedIn")
+        let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let passwordViewController = PasswordViewController(nibName: "PasswordViewController", bundle: nil)
+        
+        if(logged == "1"){
+            window?.rootViewController = passwordViewController
+        }
+        else
+        {
+            window?.rootViewController = loginViewController
+        }
+        
+        window?.makeKeyAndVisible()
+        
     }
     
     func applicationWillEnterForeground(application: UIApplication) {
@@ -81,18 +104,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        let logged = defaults.stringForKey("loggedIn")
+        let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let passwordViewController = PasswordViewController(nibName: "PasswordViewController", bundle: nil)
+        
+        if(logged == "1"){
+            window?.rootViewController = passwordViewController
+        }
+        else
+        {
+            window?.rootViewController = loginViewController
+        }
+        
+        window?.makeKeyAndVisible()
+        
     }
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    
+        
     }
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
         var pass : NSString
         let reply = responseInfo[UIUserNotificationActionResponseTypedTextKey]
         pass = reply as! NSString
-//        defaults.setInteger(2, forKey: "deuRuim")
+        //        defaults.setInteger(2, forKey: "deuRuim")
         
         if (pass != defaults.stringForKey("senha")){
             print("fudeu")
@@ -103,7 +140,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.setInteger(2, forKey: "deuRuim")
         }
     }
-
+    
     
     
 }

@@ -10,6 +10,7 @@
                 <outlet property="criarButton" destination="tt1-m3-2dI" id="oby-2I-1BH"/>
                 <outlet property="fraseLabel" destination="03a-pB-Qcd" id="Ao7-8g-VjW"/>
                 <outlet property="iconeImage" destination="e06-om-jPK" id="mmp-wg-lHN"/>
+                <outlet property="logoutButton" destination="WNd-TB-ldT" id="r25-3c-zAr"/>
                 <outlet property="lugar" destination="aE5-zW-g2S" id="Uui-ZT-3zy"/>
                 <outlet property="nome" destination="WLy-e7-3cH" id="TxY-kJ-ZBO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -177,6 +178,16 @@
                         </mask>
                     </variation>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNd-TB-ldT">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Log Out"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="173" y="562" width="55" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="logoutAction:" destination="-1" eventType="touchUpInside" id="mbp-0T-lLA"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.74901960784313726" green="0.25098039215686274" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -213,6 +224,7 @@
                     <exclude reference="e06-om-jPK"/>
                     <exclude reference="FLq-yf-qDo"/>
                     <exclude reference="aE5-zW-g2S"/>
+                    <exclude reference="WNd-TB-ldT"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="2mb-pz-hLX"/>
@@ -247,6 +259,7 @@
                     <include reference="e06-om-jPK"/>
                     <include reference="FLq-yf-qDo"/>
                     <include reference="aE5-zW-g2S"/>
+                    <include reference="WNd-TB-ldT"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="2mb-pz-hLX"/>

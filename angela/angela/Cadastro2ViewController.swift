@@ -56,22 +56,25 @@ class Cadastro2ViewController: UIViewController {
         let cadSenha = defaults.stringForKey("cadSenha")
         
         let cadTelefone = defaults.stringForKey("cadTelefone")
+    
+
         
-        if DAO.isConnected() {
-            
-            if DAO.createUser(cadNome!, email: cadEmail!, password: cadSenha!, emergpass: self.senhaDeuRuimTextfield.text!, mobile: cadTelefone!) {
-            
+//        if DAO.isConnected() {
+//            
+//            if DAO.createUser(cadNome!, email: cadEmail!, password: cadSenha!, emergpass: self.senhaDeuRuimTextfield.text!, mobile: cadTelefone!) {
+        
+                defaults.setObject("1", forKey: "loggedIn")
                 let vc = LoginViewController(nibName:"LoginViewController", bundle: nil)
                 presentViewController(vc, animated: true, completion: nil)
-                
-            } else {
-                print("Falha no cadastro")
-            }
-            
-        } else {
-            print("Falha na conexao com a internet")
-            
-        }
+//
+//            } else {
+//                print("Falha no cadastro")
+//            }
+//            
+//        } else {
+//            print("Falha na conexao com a internet")
+//            
+//        }
         
     }
     
